@@ -5,7 +5,7 @@
 ## Trading Engine
 
 * [Введение — Trading Engine](trading-engine/introduction.md)
-* [Кратко об архитектуре](trading-engine/overview.md)
+* [Коротко об архитектуре](trading-engine/overview.md)
 * [Общение между серверами](trading-engine/multi-server.md)
 * [Хранение данных](trading-engine/data-storage.md)
 * [Репликация](trading-engine/replication.md)
