@@ -2,5 +2,5 @@
 description: Наша схема Leader-Follower.
 ---
 
-# Репликация — Trading Engine
+# Репликация
 
