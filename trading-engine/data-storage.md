@@ -1,0 +1,6 @@
+---
+description: Отказались от баз данных. Используем Event Sourcing. Пишем в файл.
+---
+
+# Хранение данных — Trading Engine
+
