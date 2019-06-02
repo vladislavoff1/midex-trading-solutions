@@ -4,5 +4,6 @@
 
 ## Trading Engine
 
+* [Trading Engine. Описание](trading-engine/trading-engine.-opisanie.md)
 * [Trading Engine. Требования](trading-engine/trading-engine.-trebovaniya.md)
 
