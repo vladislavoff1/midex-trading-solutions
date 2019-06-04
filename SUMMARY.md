@@ -23,4 +23,5 @@
 
 * [Cчета](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
+* [Администрирование](midex-user-account/administrirovanie.md)
 
