@@ -18,6 +18,8 @@ description: Из чего состоит Trading Engine. Как части Trad
 
 **Application** — основной модуль Trading Engine. Хранит данные о пользователях, сталкивает ордера. 
 
+!! расписать про две части application: бизнес логика и применение событий к моделе
+
 Компоненты Application: 
 
 * Matching Engine — сталкивание ордеров
