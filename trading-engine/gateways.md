@@ -2,7 +2,7 @@
 description: 'Подключение к Trading Engine: FIX, Rest, WebSocket, Binary Protocol.'
 ---
 
-# Протоколы общения
+# Шлюзы
 
 ## 
 

@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Введение — Midex Trading Solutions](README.md)
+* [Сервисы](servisy.md)
+* [Bank](bank-1.md)
 
 ## Trading Engine
 
@@ -9,8 +11,8 @@
 * [Модули](trading-engine/modules.md)
 * [Хранение данных](trading-engine/data-storage.md)
 * [Репликация](trading-engine/replication.md)
-* [Пропускная способность и низкие задержки](trading-engine/throughput-and-latency.md)
+* [Шлюзы](trading-engine/gateways.md)
 * [Правила и фукнции торгов](trading-engine/business-logic.md)
-* [Протоколы общения](trading-engine/gateways.md)
+* [Производительность](trading-engine/throughput-and-latency.md)
 * [Roadmap — Trading Engine](trading-engine/roadmap.md)
 
