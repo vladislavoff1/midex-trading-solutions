@@ -6,7 +6,6 @@
 
 ## Trading Engine
 
-* [Untitled](trading-engine/untitled.md)
 * [Введение — Trading Engine](trading-engine/introduction.md)
 * [Принципы торговли](trading-engine/trading-principles.md)
 * [Обзор архитектуры](trading-engine/architecture-overview.md)
