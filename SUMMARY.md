@@ -6,7 +6,7 @@
 
 * [Введение — Trading Engine](trading-engine/introduction.md)
 * [Коротко об архитектуре](trading-engine/overview.md)
-* [Модули](trading-engine/multi-server.md)
+* [Модули](trading-engine/modules.md)
 * [Хранение данных](trading-engine/data-storage.md)
 * [Репликация](trading-engine/replication.md)
 * [Пропускная способность и низкие задержки](trading-engine/throughput-and-latency.md)
