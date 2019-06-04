@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Введение — Midex Trading Solutions](README.md)
-* [Сервисы](servisy.md)
-* [Bank](bank-1.md)
 
 ## Trading Engine
 
@@ -20,4 +18,9 @@
 
 * [Введение - СryptoHub](cryptohub/vvedenie-sryptohub.md)
 * [Roadmap - CryptoHub](cryptohub/roadmap-cryptohub.md)
+
+## Midex user account
+
+* [Cчета](midex-user-account/bank-1.md)
+* [Инструменты](midex-user-account/instrumenty.md)
 
