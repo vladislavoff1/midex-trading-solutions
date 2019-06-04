@@ -19,4 +19,5 @@
 ## CryptoHub
 
 * [Введение - СryptoHub](cryptohub/vvedenie-sryptohub.md)
+* [Roadmap - CryptoHub](cryptohub/roadmap-cryptohub.md)
 
