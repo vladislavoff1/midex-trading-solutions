@@ -5,13 +5,13 @@
 ## Trading Engine
 
 * [Введение — Trading Engine](trading-engine/introduction.md)
-* [Принципы торговли](trading-engine/trading-principles.md)
 * [Обзор архитектуры](trading-engine/architecture-overview.md)
 * [Модули](trading-engine/modules.md)
 * [Хранение данных](trading-engine/data-storage.md)
 * [Репликация](trading-engine/replication.md)
-* [Шлюзы](trading-engine/gateways.md)
+* [Gateways](trading-engine/gateways.md)
 * [Производительность](trading-engine/throughput-and-latency.md)
+* [Принципы торговли](trading-engine/trading-principles.md)
 * [Roadmap — Trading Engine](trading-engine/roadmap.md)
 
 ## CryptoHub
