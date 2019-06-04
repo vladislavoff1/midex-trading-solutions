@@ -18,6 +18,18 @@ Connector и Handler могут общаться по IPC, если они на 
 
 ## **Rest**
 
+Rest построен на принципах неблокирующей многопоточности. 
+
+
+
+
+
+Multi-Coring and Non-Blocking instead of Multi-Threading
+
+Идея в том, чтобы не создавать поток на каждый новый запрос, а иметь ограниченное число потоков, но 
+
+
+
 ## **Web Socket**
 
 ## **Binary Protocol**
