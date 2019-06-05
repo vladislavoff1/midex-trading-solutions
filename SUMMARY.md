@@ -21,7 +21,7 @@
 
 ## Midex user account
 
-* [Accounts](midex-user-account/bank-1.md)
+* [Аккаунты](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
 * [Администрирование](midex-user-account/administrirovanie.md)
 
