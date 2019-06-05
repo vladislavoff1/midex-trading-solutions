@@ -16,8 +16,8 @@
 
 ## CryptoHub
 
-* [Введение - СryptoHub](cryptohub/vvedenie-sryptohub.md)
-* [Roadmap - CryptoHub](cryptohub/roadmap-cryptohub.md)
+* [Введение — CryptoHub](cryptohub/overview.md)
+* [Roadmap — CryptoHub](cryptohub/roadmap.md)
 
 ## Midex user account
 
