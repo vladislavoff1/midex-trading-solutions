@@ -11,7 +11,7 @@
 * [Хранение данных](trading-engine/data-storage.md)
 * [Репликация](trading-engine/replication.md)
 * [Шлюзы](trading-engine/gateways.md)
-* [Дополнительная производительность](trading-engine/throughput-and-latency.md)
+* [Low-latency оптимизации](trading-engine/performance-tuning.md)
 * [Roadmap — Trading Engine](trading-engine/roadmap.md)
 
 ## CryptoHub
