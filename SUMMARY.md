@@ -24,7 +24,7 @@
   * [Введение - Web platform](solutions/web-platform/vvedenie-midex-account.md)
   * [Счета](solutions/web-platform/bank-1.md)
   * [Инструменты](solutions/web-platform/instrumenty.md)
-  * [Chat system](solutions/web-platform/perepiska-i-moderaciya.md)
+  * [Chat system](solutions/web-platform/chat-system.md)
   * [Администрирование](solutions/web-platform/administrirovanie.md)
 
 ## learn
