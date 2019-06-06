@@ -32,7 +32,3 @@
   * [Chat system](solutions/web-platform/chat-system.md)
   * [Администрирование](solutions/web-platform/administrirovanie.md)
 
-## learn
-
-* [Aeron Guide](https://yoldi.gitbook.io/aeron-guide)
-
