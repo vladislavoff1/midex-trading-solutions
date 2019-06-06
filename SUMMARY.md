@@ -29,9 +29,6 @@
 * [Введение - Midex Account](midex-user-account/vvedenie-midex-account.md)
 * [Счета](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
+* [Chat system](midex-user-account/perepiska-i-moderaciya.md)
 * [Администрирование](midex-user-account/administrirovanie.md)
-
-## Midex Chat
-
-* [Переписка и модерация](midex-chat/perepiska-i-moderaciya.md)
 
