@@ -16,7 +16,7 @@ description: Наша схема Leader-Follower.
 
 ## Как устроена репликация
 
-![&#x421;&#x445;&#x435;&#x43C;&#x430; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x440;&#x435;&#x43F;&#x43B;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x438;](../.gitbook/assets/leader_follower_architecture.png)
+![&#x421;&#x445;&#x435;&#x43C;&#x430; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x440;&#x435;&#x43F;&#x43B;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x438;](../../.gitbook/assets/leader_follower_architecture.png)
 
 На схеме показано, как работает репликация в Trading Engine. Сервер с бизнес логикой запускается в двух режимах: Leader и Follower. 
 
