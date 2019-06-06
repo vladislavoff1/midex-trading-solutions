@@ -30,5 +30,8 @@
 * [Счета](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
 * [Администрирование](midex-user-account/administrirovanie.md)
-* [Roadmap - Midex Account](midex-user-account/roadmap-midex-account.md)
+
+## Midex Chat
+
+* [Переписка и модерация](midex-chat/perepiska-i-moderaciya.md)
 
