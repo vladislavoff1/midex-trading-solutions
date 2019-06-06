@@ -19,9 +19,16 @@
 * [Введение — CryptoHub](cryptohub/overview.md)
 * [Roadmap — CryptoHub](cryptohub/roadmap.md)
 
-## Midex user account
+## Trading Bot
 
+* [Введение - Trading Bot](trading-bot/vvedenie-trading-bot.md)
+* [Типы роботов](trading-bot/rotobs-type.md)
+
+## Midex account
+
+* [Введение - Midex Account](midex-user-account/vvedenie-midex-account.md)
 * [Счета](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
 * [Администрирование](midex-user-account/administrirovanie.md)
+* [Roadmap - Midex Account](midex-user-account/roadmap-midex-account.md)
 
