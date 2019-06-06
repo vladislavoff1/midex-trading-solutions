@@ -20,9 +20,3 @@ description: Решения Midex для финансовых бирж.
 
 Веб сайт на котором расположены все сервисы Midex.
 
-## Learn
-
-### [Aeron Guide](https://yoldi.gitbook.io/aeron-guide)
-
-Пошаговая инструкция, как написать работающий сервер с Aeron.
-
