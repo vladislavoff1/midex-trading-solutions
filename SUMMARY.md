@@ -11,22 +11,16 @@
   * [Шлюзы](trading-engine/gateways.md)
   * [Low-latency оптимизации](trading-engine/performance-tuning.md)
   * [Roadmap](trading-engine/roadmap.md)
-
-## CryptoHub
-
-* [Введение — CryptoHub](cryptohub/overview.md)
-* [Roadmap — CryptoHub](cryptohub/roadmap.md)
-
-## Trading Bot
-
-* [Введение - Trading Bot](trading-bot/vvedenie-trading-bot.md)
-* [Типы роботов](trading-bot/rotobs-type.md)
-
-## Web platform
-
-* [Введение - Web platform](midex-user-account/vvedenie-midex-account.md)
-* [Счета](midex-user-account/bank-1.md)
-* [Инструменты](midex-user-account/instrumenty.md)
-* [Chat system](midex-user-account/perepiska-i-moderaciya.md)
-* [Администрирование](midex-user-account/administrirovanie.md)
+* [Crypto Hub](cryptohub/README.md)
+  * [Введение](cryptohub/overview.md)
+  * [Roadmap](cryptohub/roadmap.md)
+* [Trading Bot](trading-bot/README.md)
+  * [Введение](trading-bot/vvedenie-trading-bot.md)
+  * [Типы роботов](trading-bot/rotobs-type.md)
+* [Web Platform](web-platform/README.md)
+  * [Введение - Web platform](web-platform/vvedenie-midex-account.md)
+  * [Счета](web-platform/bank-1.md)
+  * [Инструменты](web-platform/instrumenty.md)
+  * [Chat system](web-platform/perepiska-i-moderaciya.md)
+  * [Администрирование](web-platform/administrirovanie.md)
 
