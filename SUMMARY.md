@@ -24,9 +24,9 @@
 * [Введение - Trading Bot](trading-bot/vvedenie-trading-bot.md)
 * [Типы роботов](trading-bot/rotobs-type.md)
 
-## Midex account
+## Web platform
 
-* [Введение - Midex Account](midex-user-account/vvedenie-midex-account.md)
+* [Введение - Web platform](midex-user-account/vvedenie-midex-account.md)
 * [Счета](midex-user-account/bank-1.md)
 * [Инструменты](midex-user-account/instrumenty.md)
 * [Chat system](midex-user-account/perepiska-i-moderaciya.md)
