@@ -2,7 +2,7 @@
 description: Что такое Trading Engine. Требования к Trading Engine.
 ---
 
-# Введение — Trading Engine
+# Введение
 
 ## **Что такое Trading Engine**
 
