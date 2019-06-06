@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Введение — Midex Trading Solutions](README.md)
+* [Getting started](README.md)
 * [Trading Engine](trading-engine/README.md)
   * [Введение](trading-engine/introduction.md)
   * [Обзор архитектуры](trading-engine/architecture-overview.md)
@@ -23,4 +23,6 @@
   * [Инструменты](web-platform/instrumenty.md)
   * [Chat system](web-platform/perepiska-i-moderaciya.md)
   * [Администрирование](web-platform/administrirovanie.md)
+* [Aeron Guide](https://yoldi.gitbook.io/aeron-guide)
+* [Midex Exchange](https://ru.midex.com/)
 

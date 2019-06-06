@@ -1,2 +1,2 @@
-# Введение — Midex Trading Solutions
+# Getting started
 
