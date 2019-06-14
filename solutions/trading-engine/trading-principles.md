@@ -34,33 +34,27 @@ Stop-limit order is an order which executes as limit when market reaches set sto
 
 ## Order execution policy
 
-При постановке ордера можно настроить Time in Force — политику исполнения ордера.
-
-Order 
-
-По умолчанию Time in Force у ордеров — Good Til Canceled.
+When order is being placed you can set up Time in Force - order execution policy. Default Time in Force of any order is Good Til Canceled.
 
 **Good Till Cancelled \(GTC\)**
 
-Ордер действует до тех пор, пока сделка не будет выполнена или отменена. 
+Order works unless is matched or cancelled. It best suits for long-term investor, who is ready to wait until asset price reaches wanted amount. Sometimes traders may wait for their order to execute with wanted price for some days or even weeks.
 
-Подходит для долгосрочного инвестора, который готов подождать, пока актив достигнет желаемой цены. Иногда трейдеры могут совершить сделку по желаемой цене за несколько дней или даже недель.
-
-Риски: выполнение заказов в неподходящие моменты, такие как краткий рост цен или временная волатильность. Последующее снижение цен может оставить трейдерам убытки.
+There are several risks though, such as execution in unwanted moments, such as short price grow or temporal volatility. Next price fall may lead trader to a loss.
 
 **Fill or Kill \(FOK\)** 
 
-Ордер немедленно и полностью исполняется по указанной цене или отменяется. 
+Order executed immediately and fully with set price or cancels.
 
-Используется для гарантии того, что весь ордер выполняется по одной цене. 
+This policy is used to guarantee that order is executed at static price.
 
-Может быть популярным на быстроразвивающихся рынках, где трейдеры хотят убедиться, что они получают хорошую цену за сделку.
+It can be popular on fast-growing markets, when traders want to be sure in good profits of deal.
 
 **Immediate or Cancel \(IOC\)**
 
-Ордер немедленно исполняется, незаполненная часть отменяется.
+Order is executed immediately, unfulfilled part is cancelled.
 
-Инвесторы используют заказы IOC для выполнения крупных заказов по определенной цене.
+Investors use IOC orders for big orders for a set price.
 
 
 
