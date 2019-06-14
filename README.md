@@ -6,17 +6,17 @@ description: Решения Midex для финансовых бирж.
 
 ### \*\*\*\*[**Trading Engine**](solutions/trading-engine/)
 
-Сталкивает ордера, хранит балансы пользователей, рассчитывает комиссии и распределяет деньги после сделки.
+Performs orders matching, keeps users' balances, counts commissions and spread money after deal
 
 ### \*\*\*\*[**Crypto Hub** ](solutions/cryptohub/)
 
-Адаптер между блокчейнами и сервисом пополнения и вывода Midex.
+Adapter between blockchain, input and output gateways of Midex
 
 ### \*\*\*\*[**Trading Bot**](solutions/trading-bot/)
 
-Управляет ликвидностью торговой площадки.
+Manages exchange's trading volume
 
 ### \*\*\*\*[**Web Platform**](solutions/web-platform/) 
 
-Веб сайт на котором расположены все сервисы Midex.
+Website for all Midex services access
 

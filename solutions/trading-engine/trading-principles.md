@@ -1,40 +1,42 @@
 ---
-description: Типы ордеров на бирже. Как реализовать новые функции.
+description: Order types and how to implement new features
 ---
 
-# Принципы торговли
+# Core of trading
 
-## **Типы ордеров**
+## **Order types**
 
 ### **Limit**
 
-Лимитный ордер — ордер на покупку или продажу определённого количества актива по указанной цене или лучше.
+Limit order is an order for buying or selling some assets for specified price or higher if available.
 
-Например: если текущая рыночная цена равна 250 и я хочу купить по цене ниже 249, то я размещаю лимитный ордер на покупку с ценой 249. Когда рыночная цена достигнет 249 и предложение продавца сойдется с моим, то лимитный ордер будет исполнен по цене 249.
+For example: if current market price is equal 250 and I want to buy for price lower than 249, I place limit BUY order with price 249. When market price will reach 249 and there will be match, limit order will be executed with price of 249.
 
 ### **Market**
 
-Рыночный ордер — ордер, который мгновенно исполняется по лучшей текущей цене.
+Market order is an order which executes immediately with current base price. 
 
-Рыночные ордера обычно используются, когда время исполнения имеет больший приоритет над ценой исполнения ордера.
+Market orders are usually used when execution time has higher priority than buy/sell price.
 
 ### **Stop**
 
-Стоп ордер — ордер, который сработает как рыночный, когда рынок достигнет установленной стоп-цены.
+Stop order is an order, which will execute as market order, when market will reach target stop price.
 
 ![Buy STOP &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x441;&#x44F;, &#x435;&#x441;&#x43B;&#x438; &#x446;&#x435;&#x43D;&#x430; &#x43F;&#x43E;&#x432;&#x44B;&#x441;&#x438;&#x442;&#x441;&#x44F; &#x434;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x43E;&#x439;. Sell STOP &#x2014;&#xA0;&#x435;&#x441;&#x43B;&#x438; &#x43F;&#x43E;&#x43D;&#x438;&#x437;&#x438;&#x442;&#x441;&#x44F;.](../../.gitbook/assets/stop-orders.png)
 
-Стоп ордер на продажу срабатывает, когда рыночная цена снижается до установленной цены. Стоп ордер на покупку срабатывает, когда рыночная цена поднимается до установленной цены. 
+Stop order for buy executes when market price lowers to a target price.                                                        Stop order for sell executes when market price rises to a target price.
 
-Стоп ордера используются для ограничения убытков или фиксации прибыли.
+Stop orders are used to avoid losses or securing profit.
 
 ### **Stop Limit**
 
-Стоп-лимитный ордер — ордер, который сработает как лимитный, когда рынок достигнет установленной вами стоп-цены.
+Stop-limit order is an order which executes as limit when market reaches set stop price.
 
-## **Политика исполнения ордера**
+## Order execution policy
 
 При постановке ордера можно настроить Time in Force — политику исполнения ордера.
+
+Order 
 
 По умолчанию Time in Force у ордеров — Good Til Canceled.
 

@@ -1,52 +1,52 @@
 ---
-description: Что такое Trading Engine. Требования к Trading Engine.
+description: What is trading engine and what problems it must solve
 ---
 
-# Введение
+# Introduction
 
-## **Что такое Trading Engine**
+## **What is Trading Engine**
 
-**Trading Engine — сталкивает ордера, хранит балансы пользователей, рассчитывает комиссии и распределяет деньги после сделки.**
+#### **Performs** orders matching, keeps users' balances, counts commissions and spread money after deal.
+
+### \*\*\*\*
 
 ![Trading Engine &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x442; &#x43E;&#x440;&#x434;&#x435;&#x440;&#x430;](../../.gitbook/assets/trading_engine%20%281%29.png)
 
-К Trading Engine подключаются маркет мейкеры, пользователи и торговые роботы. Это дает нагрузку в десятки тысяч операций в секунду.
+Trading engine serves for market makers, users and trading bots. This clients create load at more than 10000 operations in second.
 
-**Основная часть операций Trading Engine — перемещение денег.** Пользователь ставит ордер — деньги пользователя перемещаются на счет биржи. Ордер исполняется — деньги со счета биржи перемещаются на счет пользователя.
+**The most quantity of trading engine operations is money transfer transactions**. User places order, then his money move to exchange's account. When the order is matched and finished, money come back from exchange's account to user's.
 
-Подробнее функции Trading Engine описаны в [«Принципах торговли»](trading-principles.md).
+Trading engine's functions are described more in "Trading fundamentals"
 
-## Каким должен быть Trading Engine
+## What is Trading Engine should be like
 
-### **1. Большая пропускная способность**
+### **1.** High throughput
 
 Чтобы можно было торговать большому количеству торговых роботов. Каждая сделка — прибыль биржи. Так, повышая скорость биржи, мы повышаем возможное количество роботов, торгующих на ней и повышаем прибыльность.
 
-### **2. Низкие предсказуемые задержки**
+With high throughput abilities of service more client it can serve. Each deal is beneficial for exchange, so the higher throughput is, the more trading bots may trade
 
-Низкие задержки для того, чтобы могли торговать высокочастотные роботы.
+### **2. Low and predictable latency**
 
-Также если задержки больше, чем на других биржах, биржу сложнее арбитражить.
+Low latency is very important for high frequency trading bots. So if latency is higher comparing to other exchanges, exchange becomes harder to arbitrage. It is also important for all clients to be im same conditions for trading, meaning same latencies for matching orders.
 
-Чтобы у всех клиентов биржи были равные условия, у всех должны быть примерно равные задержки исполнения ордера.
-
-### **3. Надежность**
+### **3. Stability**
 
 Каждая минута незапланированного простоя биржи — упущенные прибыль и репутация. Потерянные данные для биржи — крах.
 
 При выходе биржи из строя или при выходе из строя целого датацентра \(например при пожаре\) биржа должна сохранить свои данные.
 
-### **4. Функции для торговли различными стратегиями**
+Each unplanned exchange downtime is lost profit and reputation. Lost data is a total disaster. When exchange or datacenter goes down unexpectedly it must save data. 
 
-Чем лучше настраиваются выставляемые ордера, тем больше стратегий пользователи могут реализовать на бирже. Тем больше торговых роботов будет запущено и тем больше прибыли получит биржа.
+### **4. Flexibility to support different trade strategies**
+
+The better orders can be configured, the more strategies users may use on exchange. Higher amount of trading bots may be launched and more profit exchange will get.
 
 {% hint style="warning" %}
-Из-за отсутствия stop-ордеров на некоторых криптовалютных биржах невозможно реализовать стратегию Stop Loss и Take Profit — одну из основных стратегий для трейдеров без роботов.
+If exchange doesn't support stop orders, there is no way for "Stop loss and take profit" strategy, which is one of the main trading strategies for client without bots.
 {% endhint %}
 
-### **5. Поддержка стандартных протоколов общения бирж**
+### **5. Support for common communication protocols**
 
-Почти все фиатные биржи поддерживают торговлю через FIX. А значит почти все торговые роботы поддерживают торговлю через FIX. Если поддержки FIX не будет, для появления торговых роботов на бирже будет еще одно препятствие.
-
-Если же на бирже поддерживается FIX-протокол, роботы для других бирж, почти без изменений, смогут торговать на нашей.
+Almost each fiat exchange support trading via FIX, which means almost each trading bot implementation support trading via FIX as well. Without FIX support there will be yet more limitations for trading bots to work on exchange. Having FIX supported enables trading bots to work flawlessly on Midex too.
 

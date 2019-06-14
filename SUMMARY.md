@@ -5,9 +5,9 @@
 ## Solutions
 
 * [Trading Engine](solutions/trading-engine/README.md)
-  * [Введение](solutions/trading-engine/introduction.md)
-  * [Обзор архитектуры](solutions/trading-engine/architecture-overview.md)
-  * [Принципы торговли](solutions/trading-engine/trading-principles.md)
+  * [Introduction](solutions/trading-engine/introduction.md)
+  * [Architecture overview](solutions/trading-engine/architecture-overview.md)
+  * [Core of trading](solutions/trading-engine/trading-principles.md)
   * [Модули](solutions/trading-engine/modules.md)
   * [Хранение данных](solutions/trading-engine/data-storage.md)
   * [Репликация](solutions/trading-engine/replication.md)

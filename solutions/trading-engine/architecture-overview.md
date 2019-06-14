@@ -1,60 +1,60 @@
 ---
-description: Каких цифр добились. Какие технологии используем.
+description: What are our result and which technologies do we use
 ---
 
-# Обзор архитектуры
+# Architecture overview
 
-## Каких цифр добились
+## So what are our results like
 
-**Скорость обработки транзакций — 5 млн/сек**. Транзакция — это постановка или отмена ордера, регистрация или пополнение биржевого счета. 
+**Over 5 millions of transactions per seconds may be processed.** Transaction is placing or cancelling order, registration or deposit to exchange account.
 
-**99.9% запросов исполняются быстрее, чем за 100 мкс.**
+**Over 99.9% transactions are proceed faster than 100 microseconds.**
 
-**Пропускная способность** **FIX Gateway — 300 тыс/сек**. Если пропускной способности будет не хватать, можно будет поставить еще один FIX Gateway на другом сервере.
+**Throughput of FIX Gateway is over 300 thousands requests per second.** This part scales well - if one gateway isn't enough to process all requests, another may be launched on a different server.
 
 {% hint style="success" %}
-За два года работы биржа Midex обработала 16.6 миллионов ордеров. Новый Trading Engine переиграл всю историю биржи Midex за 3 секунды. 
+Midex exchange proceeded over 16.6 millions of orders in 2 years of work. New trading engine replayed all history of exchange in just 3 second
 {% endhint %}
 
 {% hint style="info" %}
-На бирже **Coinbase** на паре ETH/BTC происходило около **30 сделок в минуту** в момент написания статьи. **Trading Engine** обрабатывает **5 миллионов** событий **в секунду**.
+**Coinbase** exchange has around **30 deals per minute** at the moment of writing. New Trading Engine proceeds 5 millions events **per second**
 {% endhint %}
 
-## Какие технологии используем
+## Which technologies do we use
 
 ### Kotlin, Java
 
-Trading Engine написан на Kotlin. Часть кода, связанного с кодированием сообщений генерируется в Java. 
+Trading engine is written in Kotlin. Some codebase, which is focused on messages encoding is generated in Java.
 
 ### Event Sourcing
 
-Храним все действия пользователей, а не конечное состояние.
+We keep all actions and events users produces, not the final state.
 
-### No Data Base
+### No Databases
 
-Мы отказались от баз данных и записываем все события в файлы на диск. Так быстрее и надежнее.
+We dropped databases from our technology stack and writing all events into hard drive. **It is much faster and more reliable.**
 
 ### Aeron 
 
-Библиотека для общения между процессами и серверами.
+It is library for inter processes messaging, which also supports inter server communication.
 
 ### CQRS
 
-Чтение данных из локального кеша для каждого шлюза. В ядро попадают только запросы, меняющие данные. 
+We only read data from local cache for each gateway. Core of trading engine accepts only requests which change data.
 
-## Бизнес логика
+## Business logic
 
-Ядро Trading Engine работает однопоточно, это позволяет писать простой код и отказаться от overhead’а многопоточных алгоритмов и переключения контекста. Из-за такой архитектуры **код бизнес логики — чистый**.
+Trading Engine core works on 1 thread, which leads to simpler code, lack of hard and unreliable multithread algorithms and context switching. **All this enables to write clean and simple code for business logic.**
 
-В ядре бизнес логики мы также используем Event Sourcing. Это значит, что бизнес логика получает команды и возвращает события на каждую команду. Из-за этого **бизнес-логику легко тестировать**: отправляем команды в бизнес логику, проверяем, что вернулись правильные события.
+In core of business logic we also use Event Sourcing. Business logic receives commands and returns events. I**t makes business logic easy to test** as well - we send commands and check, that right events are returned.
 
-Для Matching Engine мы разработали дополнительную тестовую систему. Тесты для нее пишутся в формате Markdown. Преимущества таких тестов:
+For Matching Engine we developed additional testing system. Tests are written in **markdown** format. Here are some pros of such tests:
 
-* тест наглядный, аналогичный тест на Kotlin или на Java читать сложнее
-* тесты могут писать бизнес-аналитики
-* тесты можно экспортировать в html или pdf — это всегда актуальная наглядная документация к бирже
+* test is descriptive itself; analogue in kotlin or java would be harder to understand
+* test can be written with business analysts
+* test can be exported to html or pdf, which is good and descriptive documentation for exchange
 
-Пример теста:
+And here is example of such test:
 
 ```text
 Limit Order Test Case - Test 11
