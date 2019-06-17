@@ -18,17 +18,19 @@ Depending on loads, more Connector or Handler instances may be added.
 
 ## **Rest**
 
-Rest Gateway построен на принципах неблокирующей многопоточности \(Multi-Coring and Non-Blocking instead of Multi-Threading\). Для работы с http мы используем Netty.
+Rest Gateways is build using Multi-Coring and Non-Blocking instead of multi-threading principles. We use Netty for http requests.
 
-Большая часть Java-серверов \(Tomcat, например\) создает поток на каждое подключение. Это создает проблемы:
+Most Java servers, such as Tomcat, create new thread for each connection. It leads several important problems: 
 
-* Создание потока — долгая операция
-* Поток часто простаивает. Этот поток ждет загрузки запроса пользователя, парсит его, делает запрос к другим сервисам, ждет ответы, собирает ответ для пользователя, отправляет ответ пользователю, ждет, пока ответ пользователю отправится.
-* Переключение потока — долгая  операция
+* Thread creation is long and heavy task
+* Thread is often doesn't do anything. It waits for request loading, parsing, other inner requests, waits for responses, combines all together as response for user, sends it to user and makes sure that response is sent.
+* Thread switching is a long operation as well
 
-Rest Gateway работает по-другому. При запуске создается по одному потоку на каждом ядра процессора. Потоки обрабатывают запросы пользователей. Один поток может держать одновременно несколько http-соединений.
+Rest Gateways take another approach. When this gateway is started, for each core on thread is created. Threads process users' requests. On thread may keep multiple http connections.
 
-Сравнение подходов: «MultiThreading» и «MultiCoring + Non-Blocking»:
+
+
+Comparison of "MultiThreading" and "MultiCoring & Non-Blocking" approaches:
 
 ![&#x411;&#x43B;&#x43E;&#x43A;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x439; &#x43A;&#x43E;&#x434;, &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x43E;&#x442;&#x43E;&#x43A; &#x43D;&#x430; &#x43E;&#x434;&#x43D;&#x43E; &#x441;&#x43E;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x438;&#x435;. &#x41F;&#x43E;&#x442;&#x43E;&#x43A;&#x438; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x430;&#x438;&#x432;&#x430;&#x44E;&#x442;](../../.gitbook/assets/tomcat-profiler.png)
 
@@ -38,13 +40,15 @@ Rest Gateway работает по-другому. При запуске соз�
 
 ## **Web Socket**
 
-События биржи транслируются в WebSocket библиотекой [Centrifugo](https://github.com/centrifugal/centrifugo). 
+Exchange events are broadcasted to WebSocket connections via [Centrifugo](https://github.com/centrifugal/centrifugo).  
 
-После подключения к WebSocket клиент может подписаться на каналы. 
+After successful WebSocket connection client may subscribe to channels.
 
-Существует два типа каналов: публичные и приватные. В публичную отправляются общие события — изменение стаканов ордеров, новые сделки. В приватную — обновление ордеров, мои сделки.
+There are two types of channels: public and private. Public channels share public events - order book change, new deals. Private - user's orders updates and deals.
 
 ## **Binary Protocol**
 
 Для уменьшения времени отклика и повышения пропускной способности нужно добавить бинарный протокол в Trading Engine. 
+
+We need to add binary protocol to Trading Engine to decrease latency and increase throughput.
 
