@@ -1,10 +1,10 @@
 ---
-description: CryptoHub — адаптер между блокчейнами и сервисом пополнения и вывода Midex
+description: CryptoHub — bridge between blockchain and deposit/withdraw service in Midex
 ---
 
-# Введение
+# Introducation
 
-Данное программное обеспечение в рамках биржи получает на вход различные данные из разных API интерфейсов криптовалютных нод и приводит к общему виду для зачисления на счета, либо вывода денежных криптовалютых средств со счетов пользователей биржи. Приложение учитывает особенность каждой криптовалюты и старается привести все к одному виду.
+This software in terms of exchange receives data from different APIs of cryptocurrencies' nodes and normalises deposits and withdrawals. Application considers differences of each currency and normalises it to one format.
 
 ### \*\*\*\*
 

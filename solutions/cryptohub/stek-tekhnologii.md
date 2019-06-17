@@ -1,12 +1,18 @@
 ---
-description: 'Kotlin, MariaDB, автоматическое развертывание и непрерывная интеграция'
+description: 'Kotlin, MariaDB, automatic deployment и continuous integration'
 ---
 
-# Стек технологий
+# Technology stack
 
-Проект написан на строго типизированном языке Kotlin. В роли базы данных используется MariaDB \(ответвление MySQL\). Система близка к слоистой архитектуре: имеется сервисный слой, слой доступа к данным \(базы данных\). Частично написаны unit тесты.
+Application is written in strong typed language Kotlin. For database MariaDB is used, which is a fork of MySQL. Application follows layered architecture: there is service layer, DB layer, controller layer. Important parts of system are also covered with tests.
 
-Для рендеринга используется шаблонизатор Freemaker, для API используется обычный json ответ. Для работы с каждой валютой пишутся специальные клиенты на языке Kotlin, которые обращаются по json/rpc api к нодам для того, чтобы получить определенные данные: адреса, транзакции, определенные блоки, проверка транзакций и так далее.
+For HTML rendering template manager Freemaker is used, for API we use simple JSON. For each supported cryptocurrency custom clients are written, which use json/rpc api to gather data from nodes. Gathered data consist of addresses, transactions, specific blocks, transaction checks and etc.
 
-Для сборки проекта используется Gradle, который работает с пакетами из Maven. Для автоматизации развертывания используется контейнеризация на Docker. Несколько контейнеров собираются через docker-compose. Деплой происходит с помощью непрерывной интеграции в системе сборки TeamCity, проходят тесты и затем выгружаются на продакшен, stage и ревью перед деплоем пока отсутствует.
+For application compilation and bundling we use Gradle and Maven packages. For automatic deployment we use Docker: multiple containers are build via docker-compose. Deployment is done with continuous integration in TeamCity. Flow looks like this:
+
+1. Build
+2. Test
+3. Deploy
+
+Stage and review before deploy are currently absent.
 

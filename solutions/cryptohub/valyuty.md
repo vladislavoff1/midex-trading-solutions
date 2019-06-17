@@ -1,21 +1,21 @@
 ---
-description: Какие валюты поддерживаем
+description: Which currencies do we support
 ---
 
-# Валюты
+# Currencies
 
-### Валюты
+### Currencies
 
-Данное приложение поддерживает на сегодня 11 валют \(BTC, LTC, ETH, DASH, BCH, MDX, NANJ, ADA, NEO, DST, USDT\) и может быть масштабировано до любого количества валют без необходимости доработки
+At the moment of writing this article application supports 11 currencies  \(BTC, LTC, ETH, DASH, BCH, MDX, NANJ, ADA, NEO, DST, USDT\) and may be scaled easily to implement new currencies without core architecture changes.
 
-Сryptoub имеет различные параметры настроек, которые могут как включаться, так и отключаться для каждой валюты: 
+CryptoHub supports different settings, which can be enabled/disabled for each currency separately.
 
-* Количество подтверждений - позволяет указывать, до какого числа подтверждений проверять транзакцию к блокчейне. Чаще всего значение равно 6.
-* Последний блок - для большинства валют указано, какой последний блок был просканирован. Позволяет видеть реальную ситуацию по просканированным блокам.
-* Сверять ли адреса? - опция нужна, когда мы из API интерфейса ноды получаем не только наши транзакции, а вообще все транзакции из блока или из заданного критерия. Для примера: Bitcoin отдает нам только транзакции, которые принадлежат нашим адресам, а клиент для Ethereum отдает нам по API все транзакции
-* Адрес выводов - в данном параметре мы можем указывать адрес, куда нужно владельцам отправить криптовалюту, чтобы это криптовалюту пользователи могли вывести на свои внешние адреса
+* Amount of confirmations - this setting is used to set count of confirmations after which system will start parsing block
+* Last block - for most of currencies represents last scanned block. It helps to detect if node is behind of actual state.
+* Toggle: Do match addresses? - this option is needed to be enabled if we use node's API not only for querying specific addresses, but all transactions from given filter. For example: Bitcoin gives us only transactions attached to our addresses, while Ethereum gives all transactions.
+* Withdrawal address - this field is address, which is used to transfer assets to public accounts for further users' withdrawals
 
-Есть также и другие параметры, которые на данный момент ни на что не влияют, но уже добавлены для удобства реализации нового функционала в будущем.
+There are several other parameters, which do not affect system, but are already added for further easy implementation.
 
 ![](https://lh5.googleusercontent.com/G5OMzDQIejSM-gnK3ve65zqSZUZM6RNXpVdUSvTK8yotvsU9_mi7fptKwigxHRSciv6IirZL4NJLW9ZJBADFH3WxHHiHAof6sfdr9MYWy_XWwdbgcPTBMUXFr64GQ5uAhHp1deXV)
 
