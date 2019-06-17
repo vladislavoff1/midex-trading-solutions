@@ -11,7 +11,7 @@
   * [Modules](solutions/trading-engine/modules.md)
   * [Data storage](solutions/trading-engine/data-storage.md)
   * [Replication](solutions/trading-engine/replication.md)
-  * [Шлюзы](solutions/trading-engine/gateways.md)
+  * [Gateways](solutions/trading-engine/gateways.md)
   * [Low-latency оптимизации](solutions/trading-engine/performance-tuning.md)
   * [Roadmap](solutions/trading-engine/roadmap.md)
 * [Crypto Hub](solutions/cryptohub/README.md)

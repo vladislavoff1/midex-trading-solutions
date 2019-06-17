@@ -1,20 +1,20 @@
 ---
-description: 'Подключение к Trading Engine: FIX, Rest, WebSocket, Binary Protocol.'
+description: 'Connecting to the Trading Engine: FIX, Rest, WebSocket, Binary Protocol.'
 ---
 
-# Шлюзы
+# Gateways
 
-![&#x421;&#x445;&#x435;&#x43C;&#x430; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x448;&#x43B;&#x44E;&#x437;&#x43E;&#x432; &#x43F;&#x43E;&#x434;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x43A; Trading Engine](https://lh6.googleusercontent.com/kMzv-z7SNRzVSTD6j9tbqQ0VmUjfPerG3LHMyQV9jHAxpihAXjvIx-MdPnIRtaVEFgFafy-RxUdGg0QcDPI6zZ11J0bnesOxFUUF1O0E-H1rLPibcdKz-HWcSKvVXrMU9ODL7jZW)
+![Scheme of gateways connection to Trading Engine](https://lh6.googleusercontent.com/kMzv-z7SNRzVSTD6j9tbqQ0VmUjfPerG3LHMyQV9jHAxpihAXjvIx-MdPnIRtaVEFgFafy-RxUdGg0QcDPI6zZ11J0bnesOxFUUF1O0E-H1rLPibcdKz-HWcSKvVXrMU9ODL7jZW)
 
 ## FIX ****
 
-Fix Gateway делится на две части. Одна часть \(Connector\) контролирует TCP соединения и отвечает за fix-recovery \(пересылка старых сообщений клиенту\), другая \(Handler\) обрабатывает сообщения .
+Fix gateway is split in 2 parts. First one, Connector, manages TCP connection and is responsible for fix-recovery \(old messages re-reshipment\), another one, Handler, processes events.
 
-Connector и Handler могут общаться по IPC, если они на одной машине, или по UDP, если запущены на разных. Протокол общения написанный поверх UDP дает те же гарантии, что TCP, но работает быстрее. Этот же протокол используется для связи всех сервисов биржи, которые находятся на разных машинах.
+Connector and Handler may communicate via IPC if they are on same server, or via UDP if they work on different servers. Communication protocol over UDP gives same guarantees as TCP but works faster. Same protocol is used for communications between all services launched on different servers.
 
-Одна связка Connector + Handler по нашим тестам обрабатывает примерно 300 000 Fix-сообщений \(NewOrderSingle\) в секунду. Во время теста fix сообщение декодируется, конвертируется во внутренний протокол биржи и отправляется в ядро биржи. 
+One pair of Connector + Handler may process approximately 300 000 Fix-messages \(NewOrderSingle\) in second according to our tests. Test includes fix message decoding, convertation to inner protocol and shipment to exchange core.
 
-В зависимости от нагрузок, можно добавлять больше экземпляров Engine или больше экземпляров Library.
+Depending on loads, more Connector or Handler instances may be added.
 
 ## **Rest**
 
