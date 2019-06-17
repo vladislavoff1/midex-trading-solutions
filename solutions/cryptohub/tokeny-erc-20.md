@@ -1,31 +1,33 @@
 ---
-description: Как мы экономим на комиссиях
+description: How we save on commissions
 ---
 
-# Токены ERC-20
+# ERC-20 Tokens
 
-Отдельно стоит отметить erc-20 токены, работающие у нас на платформе ethereum. Проблем при пополнении кошельков токенам не возникает, однако эти токены нужно еще как-то отправить владельцам биржи. Но есть проблема: чтобы применить метод transfer в сторону смарт-контракта, нужно оплатить топливо для совершения транзакции.
+We should also note the ERC-20 tokens that work on the Ethereum platform. There are no problems with replenishing wallets to tokens, however, these tokens must also be somehow sent to the owners of the exchange. But there is a problem: to apply the transfer method in the direction of a smart contract, you need to pay for the gas to complete the transaction.
 
-Первая идея, которая пришла нам в голову была следующей:
+First we thought of something like this:
 
-1. Если на адресе есть токены, идем дальше
-2. Если нет эфира на адресе, пополняем адрес эфиром
-3. Делаем запрос transfer в адрес смарт-контракта чтобы переместить токены на новый адрес
+1. If there are tokens on address, continue
+2. If there is no ethereum on address, replenish balance with ethereum
+3. Posting transfer request to smart contract to move tokens to a new address
 
-Однако данный способ очень не экономичный: при каждом пополнении кошелька токенами приходилось бы пополнить его эфиром и затем снова сделать запрос в адрес смарт-контракта. Чтобы сэкономить средства на комиссиях, был придуман достаточно хитрый и непрозрачный способ вывода средств.
+However, this method is not very economically good: with each replenishment of the wallet with tokens, it would be necessary to replenish it with ether and then again make a request to the smart contract. To save money on commissions, a tricky and non-transparent method of withdrawing funds was introduced.
 
- В логика системы были добавлены новые кошельки:
+We added new accounts to system:
 
-* Сервисный кошелек deposit: кошелек, с которого отправляется определенное количество эфира на адреса, на которых есть токены
-* Сервисный кошелек transfer: кошелек, который вызывает метод transferFrom для вывода токена с одного кошелька на другой \(для этого нужно получить доверенность к адресу с помощью метода approve\)
+* Service deposit wallet from which a certain amount of ether is sent to addresses where there are target tokens
+* Service transfer wallet, that calls the `transferFrom` method to transfer a token from one wallet to another \(for this operation you need to get a approval to the address using the `approve` method\)
 
-Алгоритм работы по сбору средств следующий:
+The replenishment algorithm is like that:
 
-1. Если на кошелек пришли токены, проверяем, был ли сделан approve в адрес смарт-контракта ранее
-2. Если не было approve для сервисного кошелька transfer, то кошелек deposit отправляет на данный адрес eth \(если на данном адресе нет eth\)
-3. Если кошелек был пополнен eth и не был вызван метод approve, то на адрес смарт-контракта отправляется транзакция с методом approve и выдается доверенность на выполнение транзакций с сервисного кошелька transfer.
-4. Сервисный кошелек transfer вызывает метод transferFrom и выводит с кошельков пополнений токены
+1. If wallet receives tokens, we check whether `approve` has been made to the smart contract earlier
+2. If there was no approve for the service transfer wallet, then the deposit wallet sends to the given address ether if there is not enough ether at this address
+3. If the wallet has been replenished by ether and the `approve` method has not been called, then the transaction with the `approve` method is sent to the address of the smart contract and an approval is issued to perform the transactions from the service transfer wallet.
+4. The service transfer wallet calls the `transferFrom` method and removes tokens from the top-up wallets.
 
 В итоге мы имеем следующую картину: после первого пополнения кошелька токенами, сервисный кошелек deposit пополняет его eth, отправляет запрос approve в смарт-контракт, и затем сервисный кошелек transfer выводит все токены на новый кошелек. Далее при пополнении этого же адреса, сервисный кошелек transfer сам выведет токены.  
 
+
+As a result, we have the following flow: after the first replenishment of the wallet with tokens, the service deposit wallet replenishes its ether balance, sends the `approve` request to the smart contract, and then the service transfer wallet withdraws all the tokens to the new wallet. Then on replenishment of this address, the service transfer wallet itself will withdraw tokens.
 

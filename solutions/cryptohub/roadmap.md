@@ -4,20 +4,20 @@ description: То над чем в настоящий момент идет ра
 
 # Roadmap
 
-## **Генерация адресов локально**
+## **Local addresses generation**
 
-Планируется, что адреса и приватные ключи к ним будут генерироваться локально на машине заказчика / разработчиков. А на сервер будут выгружаться только адреса, без хранения ключей к ним. Со всех адресов монеты будут выгружаться запуском на локальной машине программы.
+It is planned that the addresses and private keys to them will be generated locally on the customer’s / developers' machine. And only addresses will be downloaded to the server, without storing any keys to them. Coins will be unloaded from all addresses by launching the program on the local machine.
 
-## **Мониторинг балансов**
+## **Balance monitoring**
 
-Планируется сделать удобный интерфейс для отслеживания минимальной суммы на балансах выводов. В системе будет задаваться адрес, клиент, минимальная сумма для оповещения. Пример интерфейса представлен ниже.
+It is planned to make a convenient interface for tracking the minimum amount on the balance sheets. The system will specify the address, the client, the minimum amount for notification. An example interface is shown below.
 
 ![](https://lh6.googleusercontent.com/pE1s_BXJdffBVeb_w59SgdElEhIaP3PNeK38gLdHpFcmlXJ6WUtoORbV5DYWBkCjOr0TVJm1R317YgvVRxe8_rGcDhrSOLS3fKZicHcBtoEF18V3rDfCZmmfk6BZH-wW8wKZGrMa)
 
-## **Трансляция транзакций в mempool**
+## **Transaction broadcasting to mempool**
 
-Есть проблема, когда mempool переполняется и транзакции пропадают из очереди на отправку. Нужно сделать следующее:
+There is a problem when the mempool is full and transactions disappear from the send queue. We need to do the following:
 
-1. Повторно транслировать транзакции в mempool, если она не займанена
-2. Понимать ситуацию, видеть какие транзакции замайнились, какие висят mempool еще
+1. Re-translate transactions into mempool if it is not mined
+2. Understand the situation, see which transactions are mined already, and which still hang in mempool
 
