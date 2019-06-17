@@ -1,12 +1,14 @@
 ---
-description: 'Функции, которые добавятся в ближайшее время.'
+description: What we want to implement in nearby future
 ---
 
 # Roadmap
 
-## Снепшоты
+## Snapshots
 
 Для того, чтобы не проигрывать все события сначала, состояние биржи раз в день сохраняется \(создается снепшот\). Так события приходится проигрывать только за последний день. Снепшот ядра делается раз в сутки в момент пониженных нагрузок \(например, ночью\)
+
+To avoid full events replay, exchange's state is saved once per day\(it is called snapshot\). Using this approach system will only need to replay events for last day. Snapshot of core's state is made one time per day in time of low loads, for example, at night.
 
 ## Обновление Leader-Follower
 

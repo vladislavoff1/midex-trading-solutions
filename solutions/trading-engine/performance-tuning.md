@@ -1,40 +1,42 @@
 ---
-description: Что учесть в Java приложении для low-latency
+description: Tips for Java low latency applications
 ---
 
-# Low-latency оптимизации
+# Low-latency optimisations
 
-### Количество потоков
+### Thread amount
 
-При проектировании приложения важно сопоставлять количество активных потоков с количеством ядер процессоров системы. Какие-то потоки будут [CPU-bound](https://en.wikipedia.org/wiki/CPU-bound), какие-то — [IO-bound](https://en.wikipedia.org/wiki/I/O_bound). IO-bound потоки часто блокируются при ожидании данных из сети, или при отправке данных в сеть. Большую часть своей «жизни» они проводят в ожидании и не занимают сильно процессор. CPU-bound потоки — это потоки делающие большие сложные вычисления, им нужны вычислительные мощности процессора в полной мере. 
+When designing application it is important to match active thread count with system's cores count. Some of thread will be [CPU-bound](https://en.wikipedia.org/wiki/CPU-bound), some of them will be [IO-bound](https://en.wikipedia.org/wiki/I/O_bound). IO-bound threads often block while waiting for data from network of while sending data to network. Most of their lifespan they spend waiting for something and don't use CPU much. CPU-bound threads do heavy calculations and operations, and they need all resources they may have. 
 
-Если CPU-bound потоков больше, чем ядер процессора, какой-то поток будет «голодать», так как его постоянно будет вытеснять другой CPU-bound поток. 
+If CPU-bound threads count is higher, than cores count, one thread will run low, because he will be out of priority compared to other CPU-bound threads.
 
-Учитываться должны не только потоки самого приложения, но и сервисные потоки самой JVM. Поэтому очень желательно иметь на своем сервере процессоры с большим количеством ядер.
+It is likely to have CPU with higher amount of cores for JVM applications. It is also important to remember about service threads of JVM itself when designing application.
 
 ### Thread Affinity
 
-Важно прикрепить критически важные потоки к определенному ядру процессора, запретить операционной системе переносить этот поток на другие ядра, а также запретить операционной системе переносить на это ядро другие потоки. То есть на конкретном ядре выполняется только критически важный поток и только он. В приложении таких потоков может быть несколько, поэтому опять-таки важно чтобы числа ядер процессора хватило на все критически важные потоки и плюс осталось еще ядер на некритически важные потоки. Affinity делается с помощью сторонних библиотек прямо в коде приложения. Мы используем [OpenHFT/Java-Thread-Affinity](https://github.com/OpenHFT/Java-Thread-Affinity).
+It is must-have to match important threads with cores and restrict system to move thread to other cores, and also restrict system to move core to other threads. So one core is only used by on attached thread. There may be multiple important threads, and all off them should be bound. It is good practice to leave some extra cores for other threads. Thread affinity is done with third-party libraries and set up in code. We use [OpenHFT/Java-Thread-Affinity](https://github.com/OpenHFT/Java-Thread-Affinity).
 
-### Доступ к общей памяти
+### Shared memory access
 
-Минимальный доступ потоков к общей памяти и переменным в ней, тогда не требуется синхронизация и блокировки потоков, чтобы разрулить их совместный доступ к одной и той же переменной. 
+We try to minimise amount of threads which have access to shared memory, so its easier to manage all this multithreading, synchronisation and locking management.
 
 ### Lock-free
 
-Использовать [lock-free алгоритмы и структуры данных](https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D1%8E%D1%89%D0%B0%D1%8F_%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F). Блокировки существенно повышают latency системы, вызывают переключения контекста ОС. 
+We use [lock-free algorithms and data structures.](https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D1%8E%D1%89%D0%B0%D1%8F_%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F) Blocking increase latencies of system critically and cause OS context switch. 
 
-В случае lock-free структур данных часть кода будет загружать ядро процессора на 100%. Это нормально. Убедитесь только, что поток надежно привязан к этому ядру, иначе ОС будет пытаться его остановить, запарковать и исполнить на ядре другой поток \(см. про Affinity выше\).
+In case of lock-free structures part of code will load CPU core fully. It's fine, just make sure that thread is bound to this code, otherwise OS will try to stop thread, park it and execute other thread on this core. 
 
-### Обращения к диску
+### Hard drive IO
 
-Снизить до минимума записи в логи. Писать в логи только то, что совершенно необходимо для отслеживания работы системы. В low-latency программах записи на диск — это самые дорогие операции. Запись в лог должна осуществляться **асинхронно**: программа не должна ждать в коде, когда закончится запись на диск, прежде чем выполнить следующую команду: это приводит к блокировке потока, переключению контекста и затратам на запуск потока после того, как запись на диск завершена.
+Data written to logs should be as neat as possible. In low-latency applications hard drive IO is the most expensive kind of operations. Logging should be done **asynchronously:** application must not wait for IO to finish to continue its work, otherwise thread is blocked, context switch and etc. All the problems we want to avoid.
 
-### Сборка мусора
+### Garbage collecting
 
 Снизить до минимума [количество мусора](https://habr.com/ru/post/436024/), которое производит приложение. Чем быстрее heap заполнится мусором, тем скорее запустится сборщик мусора. 
 
 Хранить данные и объекты можно за пределами JVM heap в нативной памяти JVM процесса. Это делается либо с помощью недокументированного класса [Unsafe](https://www.baeldung.com/java-unsafe).
 
+It is important to minimise garbage application produces. The faster heap is filled with garbage, the faster GC is called to free RAM, which causes to temporal latency increases. 
 
+Data may be stored outside of JVM heap in native memory of JVM process. It is done using experimental [Unsafe](https://www.baeldung.com/java-unsafe) implementation. 
 
