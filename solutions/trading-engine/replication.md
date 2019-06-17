@@ -1,30 +1,33 @@
 ---
-description: Наша схема Leader-Follower.
+description: Our Leader-Follower approach
 ---
 
-# Репликация
+# Replication
 
-Хранить все данные на одном сервере — ненадежно. Данные потеряются, если сервер выйдет из строя.
+It is unsafe to keep all data on one server. If this server breaks, all data will be lost.
 
-**Все данные Trading Engine хранятся одновременно на нескольких серверах.** Если какой-то сервер выйдет из строя, данные не потеряются.
+**All Trading Engine's data are stored simultaneously on several servers.** If one server breaks down, data won't be lost. ****
 
-**Сервер с копией данных мы называем репликой.** Копирование данных на другие сервера в режиме реального времени мы называем репликацией.
+**Server which copies data is called replica.** Process of data copy on different servers is called replication.
 
 **Количество реплик настраивается.** Обычно мы используем две реплики.
 
-Чем больше реплик, тем надежнее система, но тем медленнее она работает. Поэтому выбор количества реплик — поиск баланса надежности и производительности.
+**Amount of replicas is customisable.** We usually use 2 replicas. 
 
-## Как устроена репликация
+The more replicas system has, the more reliable it is. The cost is speed, so there should be balance between reliability and performance in terms of replicas count.
 
-![&#x421;&#x445;&#x435;&#x43C;&#x430; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x44B; &#x440;&#x435;&#x43F;&#x43B;&#x438;&#x43A;&#x430;&#x446;&#x438;&#x438;](../../.gitbook/assets/leader_follower_architecture.png)
+## How replication is done
 
-На схеме показано, как работает репликация в Trading Engine. Сервер с бизнес логикой запускается в двух режимах: Leader и Follower. 
+![Replication scheme](../../.gitbook/assets/leader_follower_architecture.png)
 
-* `Node` — сервер, состоит из двух модулей: `application` и `archive`, содержит бизнес логику и сохраняет события на диск.
-  * `Leader` — режим, в котором `нода` создает события.
-  * `Follower` — режим, в котором `нода` подписывается на события `Leader`.
-* `Application` — бизнес логика Trading Engine. [Подробнее на странице «Модули»](modules.md#spisok-modulei).
+Replication is shown on scheme. Server with business logic may be run in 2 configurations: Leader or Follower.
+
+* `Node` - server, which consists of 2 modules: `application` and `archive`, contains business logic and writes events to drive.
+  * `Leader` — configuration when `node` may produce events
+  * `Follower` — configuration when `node` subscribes to `Leader's` events
+* `Application` — Trading Engine's business logic. [More on page «Modules»](modules.md#spisok-modulei).
 * `Archive` — модуль сохранения данных, последовательно записывает поток сообщений на диск.
+* `Archive` - data storage module, writes event stream consistently to drive
 
 Как работает нода:
 

@@ -1,51 +1,53 @@
 ---
-description: Отказались от баз данных. Используем Event Sourcing. Пишем в файл.
+description: No databases. Event Sourcing. Using files as long-term data store.
 ---
 
-# Хранение данных
+# Data storage
 
-## Почему **базы данных не подходят**
+## Why no databases
 
-Обычно в базе данных хранят текущее состояние приложения. Так для Trading Engine в базе данных могли храниться балансы пользователей:
+Usually database keeps current state of an application. Here is example of database table with users' balances:
 
 | user | balance |
 | :--- | :--- |
 | John | 100 USD |
 | Bill | 10 USD |
 
-Представим, что Джон решил отправить `10 USD` Биллу. Trading Engine снимает `10 USD` со счета Джона и зачисляет `10 USD` на счет Биллу. Но сервер выходит из строя в середине процесса. Так у Джона уже сняли `10 USD`, но пользователю Биллу `10 USD` не зачислили. Деньги потерялись.
+Let's imagine such scenario: John wants to send `10 USD` to Bill. Trading Engine takes `10 USD` from John's account and adds `10 USD` to Bill's account. But server goes down between steps, and as a result John's account is already withdrawn, but Bill didn't receive his `10 USD`. Money is lost.
 
-Для этого в базах данных используются транзакции. Транзакции — сложный механизм, который не дает деньгам потеряться даже, если в процессе перемещения денег сервер вышел из строя. Проблема в том, что в сложных системах транзакции замедляют работу всего приложения.
+Modern databases support transactions to avoid such situations. Transaction is a very complex mechanism, which doesn't allow money to get lost even if server drops while money transferring. There is a cost though; complex transactions slow down application.
 
-Так как почти каждая операция Trading Engine — перемещение денег, каждая операция в базе данных оборачивается в транзакцию. Это сильно замедляло работу и из-за этого мы отказались от баз данных в Trading Engine.
+Assuming that almost each operation of Trading Engine is money transferring, each database operation with database should be wrapped in transaction, which leads to very slow operation speed. That's why we gave up on databases in Trading Engine.
 
 ## Event Sourcing
 
 Вместо балансов пользователей мы храним события пользователя: сделал депозит, выставил ордер. Этот подход называется EventSourcing. Текущий баланс пользователя на диске не хранится. 
 
-> Раньше хранили финальное состояние, а теперь храним все события:
+Instead of users' balances we keep users' events: deposit event, order creation. This approached is called Event Sourcing. We don't keep users' balances to hard drive. 
+
+> We used to keep final state, but now we keep events:
 >
-> * Bill зарегистрировался
-> * John зарегистрировался
-> * John пополнил счет на $100
-> * Bill пополнил счет на $10
-> * John перевел $10 пользователю Bill
+> * Bill signed up
+> * John signed up
+> * John made a deposit for 100$
+> * Bill made a deposit for 10$
+> * John transferred 10$ to Bill
 
-Если во время исполнения события сервер выйдет из строя, деньги не потеряются.
+Even if server goes down while processing events, money won't lose.
 
-## События сохраняются в файл
+## Events are written to hard drive
 
-Для сохранения событий не нужны транзакции и вторичные индексы, не нужно ничего, кроме последовательного чтения и записи в конец файла. Это сильно повышает скорость сохранения данных по сравнению с базой данных и упрощает репликацию.
+We don't need transactions or secondary indexes for safe events keeping. We don't need anything except consistent reading and appending of file. It increases speed of data storing compared to databases and simplifies replication. 
 
-Так как события между модулями кодируются с помощью Simple Binary Encoding, кодировать их второй раз для сохранения на диск не нужно.
+Since the events between modules are encoded using Simple Binary Encoding, it is not necessary to encode them a second time to save to disk.
 
-Бинарный буфер событий пишется напрямую в файл. При перезапуске системы файл вычитывается в такой же бинарный буфер. 
+Binary event buffer is mapped to file. When system restarts file is read to the same binary buffer.
 
-## Текущее состояние — в оперативной памяти
+## Storing current state to RAM
 
-Текущее состояние Trading Engine \(балансы, открытые ордера\) имеется только в оперативной памяти. Если событие изменило баланс пользователя — меняем его только в оперативной памяти. 
+Current state of Trading Engine \(balances, open orders\) is only stored in RAM. If events changed user's balance we only change this balance in RAM. 
 
-Если сервер перезапустится, очистив оперативную память, все записанные события проиграются и в памяти снова будет актуальное текущее состояние.
+If server restarts, which includes clearing RAM, all stored events are replayed and there will be actual state in RAM.
 
 \*\*\*\*
 

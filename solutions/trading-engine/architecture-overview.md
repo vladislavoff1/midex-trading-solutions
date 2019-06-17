@@ -28,7 +28,7 @@ Trading engine is written in Kotlin. Some codebase, which is focused on messages
 
 ### Event Sourcing
 
-We keep all actions and events users produces, not the final state.
+We keep all actions and events users produces, not the final state. This approach enables restoring state of application after unexpected failure or planned downtime.
 
 ### No Databases
 
