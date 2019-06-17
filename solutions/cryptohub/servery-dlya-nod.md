@@ -1,31 +1,31 @@
 ---
-description: 'Cколько нод используем, для чего нужны запасные, как устроен мониторинг.'
+description: 'How many nodes do we use, do we need extra nodes and what about monitoring'
 ---
 
-# Работа с нодами
+# Nodes workflow
 
-### **Используемые клиенты для работы с нодами**
+### **Clients we use**
 
-* **Bitcoin** - используется официальная нода bitcoin-core, удовлетворяющая всем запросам для ввода/вывода/генерации адресов - [https://github.com/bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
-* **Ethereum** - на данной ноде у нас также подключены Midex токен и NANJ. Раньше использовали официальный клиент, написанный на языке go - go-ethereum. Однако ПО достаточно нестабильное, может месяц работать и сломаться. В итоге используется проверенная временем нода от parity - [https://github.com/paritytech/parity-ethereum](https://github.com/paritytech/parity-ethereum)
-* **Neo** - для валюты  neo \(токены не используются в системе\) используется официальный клиент без веб-интерфейса - [https://github.com/neo-project/neo-cli](https://github.com/neo-project/neo-cli)
-* **Destream** - для валюты dst используется официальный клиент, который работает стабильно, несмотря на некоторые перебои у майнинг-нод - [https://git.poka.website/destream-public/destream-blockchain](https://git.poka.website/destream-public/destream-blockchain)
-* **ADA \(Cardano\)** - клиент для работы с ADA, используется официальный клиент - [https://github.com/input-output-hk/cardano-sl](https://github.com/input-output-hk/cardano-sl) Одно время были большие утечки память, последние полгода работает без перебоев \(на основе мониторинга\)
-* **USDT** - для работы с данной валюты используется OmniCore, ответвленный от bitcoin core версии 13. Работает адекватно только без интерфейса и на Ubuntu, сам клиент - [https://github.com/OmniLayer/omnicore](https://github.com/OmniLayer/omnicore)
+* **Bitcoin** - we use official node bitcoin-core, which suits perfectly our needs.[https://github.com/bitcoin/bitcoin](https://github.com/bitcoin/bitcoin)
+* **Ethereum** - this node is used for Midex tokens and NANJ. We used to use official client written in `go` language - `go-ethereum`, but this software turned out to be unstable. As result we use time-proven node from parity - [https://github.com/paritytech/parity-ethereum](https://github.com/paritytech/parity-ethereum)
+* **Neo** - for NEO currency\(tokens aren't used in system\) we use official client without web interface - [https://github.com/neo-project/neo-cli](https://github.com/neo-project/neo-cli)
+* **Destream** - for DST currency we use official client, which is stable, despite several troubles in mining nodes. [https://git.poka.website/destream-public/destream-blockchain](https://git.poka.website/destream-public/destream-blockchain)
+* **ADA \(Cardano\)** - client for ADA currency, we use official client. There used to be memory leaks, but last 6 months node works fine according to monitoring. [https://github.com/input-output-hk/cardano-sl](https://github.com/input-output-hk/cardano-sl)
+* **USDT** - we use OmniCore client, which is fork from bitcoin-core v13. It works well without web interface on Ubuntu. [https://github.com/OmniLayer/omnicore](https://github.com/OmniLayer/omnicore)
 
-### Криптовалютные ноды
+### Cryptocurrency nodes
 
-В зависимости от криптовалюты, нам может потребоваться либо одна нода, либо две. Каждая нода имеет набор метрик в мониторинге Zabbix, что позволяет узнавать о проблемах с нодами раньше, чем пользователи напишут об этом в техническую поддержку. Многие ошибки локализуются таким образом, что пользователи не успевают даже эти ошибки заметить.
+Depending on the cryptocurrency, we may need either one node or two. Each node has a set of metrics in Zabbix monitoring, which allows you to learn about problems with nodes before users write about this in technical support. Many errors are localized in such a way that users do not even have time to notice these errors.
 
-Две ноды может понадобиться для таких валют как Bitcoin, Litecoin, Dash, Bitcoin Cash, Cardano, Tether, DeStream. Это нужно потому, что нода является сама по себе кошельком и не смешивает входящие платежи с исходящими. Есть четкое разделение входящего и исходящего кошелька, что позволяет нам при взломе системе не потерять входящие платежи и свести потери к минимуму.
+Two nodes may be needed for currencies like Bitcoin, Litecoin, Dash, Bitcoin Cash, Cardano, Tether, DeStream. This is necessary because the node is in itself a wallet and does not mix incoming payments with outgoing payments. There is a clear separation of incoming and outgoing wallet, which allows us not to lose incoming payments and minimise losses when the system is hacked.
 
-Однако есть ноды типа Ethereum, Neo, Tron, в которых сам клиент не содержит кошелька с приватными ключами, поэтому для запуска валют на этих нода достаточно одной ноды. Но нужно иметь ввиду, что у криптовалют программное обеспечение достаточно нестабильное, поэтому лучше всегда резервировать ноды и иметь в запасе хотя бы по одной запасной ноде. Запасные ноды не держать в том же месте, а иметь   отдельный сервер, где они будут развернуты.
+However, there are nodes like Ethereum, Neo, Tron, in which the client itself does not contain an account with private keys, so one node is enough to run currencies on these nodes. But you need to keep in mind that the cryptocurrency software is quite unstable, so it is always best to reserve nodes and have at least one spare node in reserve. Spare nodes are not kept in the same place, but have a separate server where they will be deployed.
 
-### **Мониторинг нод**
+### **Node monitoring**
 
-Каждая нода имеет свое API, свою сюрпризы в плане стабильности и свое метрики для мониторинга работоспособности системы. Практически на всех виртуальных машинах, где расположены как минимум такие метрики как проверка свободного места, оперативной памяти, загрузки процессора, и самая простая метрика - запущен ли процесс ноды. Система мониторинга работает на Zabbix.
+Each node has its own API, its own surprises in terms of stability and its own metrics for monitoring system performance. Almost on all virtual machines several metrics are present, such as free space check, RAM, processor load, and the simplest metric is whether the node process is running. The monitoring system works on Zabbix.
 
-Для нод семейства Bitcoin, куда входит Litecoin, Dash, Bitcoin cash есть метрики, которые проверяют насколько сильно нода отстает, также строятся различные графики загрузки блоков. Мониторинг также считает, было ли изменение блоков за последние полчаса. Ниже представлен пример графика скачивания блоков Bitcoin.
+For the Bitcoin family, which includes Litecoin, Dash, Bitcoin cash, there are metrics that check how far the node is lagging behind, various block load charts are also built. Monitoring also considers whether there has been a change in blocks in the last half hour. Below is an example of a Bitcoin block download schedule.
 
 ![&#x422;&#x430;&#x43A;&#x43E;&#x439; &#x436;&#x435; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x443;&#x432;&#x438;&#x434;&#x435;&#x442;&#x44C; &#x438; &#x434;&#x43B;&#x44F; ethereum:](https://lh6.googleusercontent.com/Y1ev7N_7Gk9I_4LU5GBApLg53hmAMvc50aBG0I6c7WjJlK7UMQCy4FJutyA9UrxRPS8DCmyIcpg2zhxZFH3oN7kU6iqKogQ0AV-UCxz-8IO7pF3y6f850XW6iAcYLwFHcuV4LCik)
 
@@ -33,9 +33,9 @@ description: 'Cколько нод используем, для чего нуж�
 
 ![](https://lh6.googleusercontent.com/b9NC-S_d_ObpKcRO9POXZhmthYs5rY3JZwOMYD95wn2hS_4_piofeTgU4TTgE9Q9zS7QzNFQCTklE3MG0MrKQlwiF90rNOfnqzDMdCCwT24QsQHVFxkoXI8cmucFxrRQ5ReoTnhM)
 
-У нас на практике была ситуация, что блокчейн одной из развивающихся валют останавливался в майнинге. Благодаря нашим метрикам, которые следят за появлением новых блоков в различные интервалы времени, мы заметили эту проблему и сообщали разработчикам этих валют.
+We had a situation that the blockchain of one of the developing currencies stopped while mining. Thanks to our metrics that monitor the emergence of new blocks at different time intervals, we noticed this problem and informed the developers of these currencies.
 
-Естественно никто не держит открытым вкладку с панелью Zabbix, это неудобно и можно что-то пропустить. Все важные уведомления отправляются в telegram канал разработчиков и также дублируется на электронную почту.
+Nobody keeps an open tab with the Zabbix panel of course, this is inconvenient and you can skip something. All important notifications are sent to the developers telegram channel and also duplicated by email.
 
 ![](https://lh5.googleusercontent.com/sgaTu_r08EgJvEt99YGgDtc14_NZXjLL0AdppvBKLIvnr8eNOYdNZlmvMU97YOwxDG1VALfpg98n1_RmDZpE7sU1Fr38d1tM0sJSd4fCmfLSpklozGQYXeA9JretmJEEiAeAf8ot)
 
