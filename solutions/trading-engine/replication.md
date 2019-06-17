@@ -29,19 +29,19 @@ Replication is shown on scheme. Server with business logic may be run in 2 confi
 * `Archive` — модуль сохранения данных, последовательно записывает поток сообщений на диск.
 * `Archive` - data storage module, writes event stream consistently to drive
 
-Как работает нода:
+How does `node` work:
 
-* `Application` обрабатывает команду и генерирует события. `Follower` пропускает этот этап.
-* События применяются к внутреннему состоянию `application` и публикуются.
-* Из `application` события отправляются в `archive`. 
-* `Archive` записывает событие на диск и публикует его.
+* `Application` processes command and generates events. `Follower` skips this stage
+* Events are applied to inner state of `application` and publish
+* Events from `application` are sent to `archive`
+* `Archive` writes data to hard drive and publishes it
 
-Как работает нода во время запуска:
+How does `node` work when starts:
 
-* `Application` отправляет `archive` запрос на получение старых событий. 
-* `Archive` считывает с диска события и публикует. 
-* События из `archive` передаются в `application`.
-* `Application` применяет события к внутреннему состоянию.
+* `Application` send request to `archive` to receive old events
+* `Archive`reads events from drive and publishes them
+* Events from `archive` are sent to `application`
+* `Application`applies events to inner state
 
 
 
