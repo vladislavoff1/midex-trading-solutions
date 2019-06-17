@@ -48,7 +48,5 @@ There are two types of channels: public and private. Public channels share publi
 
 ## **Binary Protocol**
 
-Для уменьшения времени отклика и повышения пропускной способности нужно добавить бинарный протокол в Trading Engine. 
-
 We need to add binary protocol to Trading Engine to decrease latency and increase throughput.
 

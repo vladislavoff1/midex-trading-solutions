@@ -6,23 +6,21 @@ description: What we want to implement in nearby future
 
 ## Snapshots
 
-Для того, чтобы не проигрывать все события сначала, состояние биржи раз в день сохраняется \(создается снепшот\). Так события приходится проигрывать только за последний день. Снепшот ядра делается раз в сутки в момент пониженных нагрузок \(например, ночью\)
-
 To avoid full events replay, exchange's state is saved once per day\(it is called snapshot\). Using this approach system will only need to replay events for last day. Snapshot of core's state is made one time per day in time of low loads, for example, at night.
 
-## Обновление Leader-Follower
+## Improvements in Leader-Follower
 
-Для отказоустойчивости используется одновременно несколько ядер биржи. Если одно выходит из строя — система автоматически переключается на другое. При рестарте ядра оно восстанавливается со снепшота и проигрывает все события после него. Это обычно занимает несколько минут.
+For fault tolerance we use several instances of exchange simultaneously. If one of them goes down system automatically switched to another. After restarting of failed node its state is restored from snapshot and events after it. It usually takes several minutes to finish.
 
 ## Binary Gateway
 
-Для уменьшения времени отклика и повышения пропускной способности нужно добавить бинарный протокол в Trading Engine. 
+We need to add binary protocol to Trading Engine to decrease latency and increase throughput.
 
 ## Taker Maker
 
-Добавить в логику биржи возможность создания разных комиссий для taker и maker ордеров.
+We need to implement ability to create different commission for taker and maker orders in business logic.
 
-Maker — ордер в книге ордеров. Повышает ликвидность биржи
+Maker - order in order book. Increases exchange liquidity
 
-Taker — ордер, который сталкивается с ордером из книги ордеров. Понижает ликвидность.
+Taker - order which matches with another order from order book. Lowers liquidity.
 
