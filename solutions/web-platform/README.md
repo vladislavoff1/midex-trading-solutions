@@ -1,5 +1,5 @@
 ---
-description: Веб сайт на котором расположены все сервисы Midex.
+description: Web site with all Midex services.
 ---
 
 # Web Platform

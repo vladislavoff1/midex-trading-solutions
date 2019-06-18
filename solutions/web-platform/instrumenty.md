@@ -1,122 +1,122 @@
 ---
 description: >-
-  Инструменты служат пользователю для операций со средствами, находящимися на
-  его счетах и для взаимодействия с другими пользователями с целью извлечения
-  финансовой пользы.
+  The instruments serve the user for transactions with funds held in his
+  accounts and for interacting with other users in order to gain financial
+  benefits.
 ---
 
-# Инструменты
+# Instruments
 
-## Торговая площадка \(биржа\)
+## Trading platform \(exchange\)
 
-Представляет из себя торговый терминал для работы с которым пользователю необходимо иметь на своем [биржевом счету](bank-1.md#tipy-schetov) положительный баланс. 
+This is a trading terminal to work with which the user needs to have a positive balance on his exchange account.
 
 ![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x432;&#x438;&#x434;&#x430; &#x442;&#x435;&#x440;&#x43C;&#x438;&#x43D;&#x430;&#x43B;&#x430;](../../.gitbook/assets/image%20%285%29.png)
 
-На текущий момент на бирже представлены к торговле следующие валютные пары \(90 пар\):
+Currently, the following currency pairs are represented on the stock exchange \(90 pairs\):
 
-* MDX/BTC MDX/ETH MDX/USD MDX/EUR MDX/GBP MDX/JPY MDX/CNY MDX/BCH MDX/LTC MDX/DASH MDX/NANJ MDX/RUB ETH/BTC BTC/USD BTC/EUR BTC/GBP BTC/JPY BTC/CNY BCH/ETH ETH/USD ETH/EUR ETH/GBP ETH/JPY ETH/CNY BCH/BTC LTC/ETH BCH/USD BCH/EUR BCH/GBP BCH/JPY BCH/CNY LTC/BTC LTC/USD LTC/EUR LTC/GBP LTC/JPY LTC/CNY DASH/ETH DASH/BTC DASH/USD DASH/EUR DASH/GBP DASH/CNY NANJ/ETH NANJ/BTC NANJ/USD NANJ/EUR NANJ/GBP NANJ/JPY NANJ/CNY BTC/RUB ETH/RUB LTC/RUB DASH/RUB MDX/HKD BTC/HKD ETH/HKD BCH/HKD LTC/HKD DASH/HKD NANJ/HKD ADA/BTC ADA/ETH ADA/USD ADA/EUR ADA/GBP ADA/HKD ADA/JPY ADA/CNY MDX/ADA NEO/BTC NEO/ETH NEO/USD NEO/EUR NEO/GBP NEO/HKD NEO/JPY NEO/CNY MDX/NEO DST/BTC BTC/USDT ETH/USDT LTC/USDT MDX/USDT USDT/USD USDT/HKD TRX/BTC TRX/ETH TRX/USDT DST/ETH
+MDX/BTC MDX/ETH MDX/USD MDX/EUR MDX/GBP MDX/JPY MDX/CNY MDX/BCH MDX/LTC MDX/DASH MDX/NANJ MDX/RUB ETH/BTC BTC/USD BTC/EUR BTC/GBP BTC/JPY BTC/CNY BCH/ETH ETH/USD ETH/EUR ETH/GBP ETH/JPY ETH/CNY BCH/BTC LTC/ETH BCH/USD BCH/EUR BCH/GBP BCH/JPY BCH/CNY LTC/BTC LTC/USD LTC/EUR LTC/GBP LTC/JPY LTC/CNY DASH/ETH DASH/BTC DASH/USD DASH/EUR DASH/GBP DASH/CNY NANJ/ETH NANJ/BTC NANJ/USD NANJ/EUR NANJ/GBP NANJ/JPY NANJ/CNY BTC/RUB ETH/RUB LTC/RUB DASH/RUB MDX/HKD BTC/HKD ETH/HKD BCH/HKD LTC/HKD DASH/HKD NANJ/HKD ADA/BTC ADA/ETH ADA/USD ADA/EUR ADA/GBP ADA/HKD ADA/JPY ADA/CNY MDX/ADA NEO/BTC NEO/ETH NEO/USD NEO/EUR NEO/GBP NEO/HKD NEO/JPY NEO/CNY MDX/NEO DST/BTC BTC/USDT ETH/USDT LTC/USDT MDX/USDT USDT/USD USDT/HKD TRX/BTC TRX/ETH TRX/USDT DST/ETH
 
-Пользователю доступны инструменты технического анализа: TradingView. 
+Technical analysis tools are available to the user: TradingView.
 
-Интерфейсные возможности терминала:
+Interface terminal features:
 
-* Просмотр истории торгов по выбранной валютной паре
-* Просмотр котировок из процент изменения за сутки
-* Просмотр своей истории торгов
-* Просмотр своих открытых ордеров
-* Просмотр доступных к взаимодействию ордеров, поставленных другими пользователями
-* Интерактивный чат с администраторами или другими пользователями. Отдельный чат для каждого языка: 
+* View trading history for the selected currency pair
+* View quotes from the percentage change per day 
+* View your bidding history 
+* View your open orders
+* View available to the interaction orders placed by other users.
+* Interactive chat with administrators or other users. Separate chat for each language
 
-## Агрегатор котировок
+## Quotation aggregator
 
-Пользователь получает возможность наблюдать за котировками по выбранной валютной паре на любой из ТОПовых криптовалютных бирж на одном экране, производить анализ изменения цены, а также отслеживать его на групповом графике
+The user can monitor the quotations for the selected currency pair on any of the top cryptocurrency exchanges on one screen, analyze price changes, and also track it on a group chart.
 
 ![&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x433;&#x440;&#x443;&#x43F;&#x43F;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A;&#x430; &#x43F;&#x43E; 6 &#x431;&#x438;&#x440;&#x436;&#x430;&#x43C; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x435; BTC/USD](../../.gitbook/assets/image%20%2826%29.png)
 
-Котировки обновляются автоматически и предоставляют пользователю актуальную информацию.
+Quotations are updated automatically and provide the user with relevant information.
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x430;&#x433;&#x440;&#x435;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x430; &#x43A;&#x43E;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x43E;&#x43A; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x435; BTC/USD](../../.gitbook/assets/image%20%2819%29.png)
 
-## Кошелек \(виртуальное хранилище\)
+## Account \(inner storage\)
 
-Используется для хранения средств пользователя и их перевода куда-либо. Кошелек защищен средствами защиты аккаунта:
+Used to store user funds and transfer them somewhere. The wallet is protected by account protection:
 
-* двуфакторная авторизация
-* шифрование
-* https
-* e-mail подтверждение всех расходных операций
-* логирование
+* two-factor authentication
+* encryption
+* https 
+* e-mail confirmation of all expenditure transactions 
+* logging
 
-![&#x418;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F; &#x432;&#x445;&#x43E;&#x434;&#x43E;&#x432; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%2824%29.png)
+![Login history](../../.gitbook/assets/image%20%2824%29.png)
 
-Для каждой криптовлюты  [генерируется уникальный адрес пополнения](../cryptohub/overview.md#generaciya-adresov), за процесс генерации адреса отвечает сервис [СryptoHub](../cryptohub/overview.md), который также отвечает за все внешние транзакции. Каждый кошелек имеет свой уникальный ID, который также является и ID пользователя.
+For each cryptocurrency an unique replenishment address is generated, the CryptoHub service, which is also responsible for all external transactions, is responsible for the address generation process. Each wallet has its own unique ID, which is also the user ID.
 
 ![&#x41E;&#x43A;&#x43D;&#x43E; &#x441; &#x443;&#x436;&#x435; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x430;&#x434;&#x440;&#x435;&#x441;&#x43E;&#x43C; &#x43F;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F;](../../.gitbook/assets/image%20%2821%29.png)
 
-Для работы с фиатными валютами подключены и настроены следующие шлюзы:
+The following gateways are connected and configured to work with fiat currencies:
 
 ![](../../.gitbook/assets/image%20%2822%29.png)
 
-*  WireTransfer \(создана собственная панель администрирования и работа через безопасный удаленный сервер\)
-* ZOTA Pay
+* WireTransfer \(created its own administration panel and work through a secure remote server\) 
+* ZOTA Pay 
 * Connectum
 
-Для дополнительной безопасности, для учетной записи пользователя существует процедура KYC, которая в настоящий моент производится через интеграцию с сервисом  SUM & Substance, при этом мы также имеем техническую возможность отказаться от этого сервиса и производить верификацию пользователя своими силами.
+For additional security, there is a KYC procedure for a user account, which is currently implemented through integration with the SUM & Substance service, while we also have the technical ability to refuse this service and verify the user on our own.
 
-## **Создание MDX-кодов** 
+## **MDX codes creation**
 
-Пользователь может создать уникальный цифровой код в котором будет зашифровано нужное ему количество средств в выбранной валюте.
+The user can create a unique digital code in which the necessary amount of funds in the selected currency will be encrypted.
 
 ![](../../.gitbook/assets/image%20%2820%29.png)
 
- После создания кода баланс пользователя уменьшается на указанную в коде величину, а код становится доступен для передачи другому пользователю или самостоятельной последующей активации.
+After the code is created, the user's balance is reduced by the amount indicated in the code, and the code becomes available for transfer to another user or for independent activation.
 
 ![](../../.gitbook/assets/image%20%2825%29.png)
 
- При активации кода баланс пользователя пополняется на зашифрованную в коде сумму и код считается погашенным и больше не подлежит использованию. 
+When the code is activated, the user's balance is replenished by the amount encrypted in the code and the code is considered to be canceled and is no longer to be used.
 
-## **Переводы другому пользователю**
+## **Transfers to other users**
 
-Пользователь может отправить или получить перевод внутри системы при наличии необходимого баланса на своих счетах. Чтобы отправить перевод необходимо указать ID получателя.
+The user can send or receive a transfer within the system if there is the necessary balance in their accounts. To send a transfer, you must specify the recipient ID.
 
 ![](../../.gitbook/assets/image%20%282%29.png)
 
-## **Обмен с другим пользователем \(Эскроу\)**
+## Exchange with another user
 
-Пользователь имеет возможность совершить обмен с другим пользователем безопасно, без риска не получить средства в ответ. Для этого один пользователь отправляет другому заявку на обмен. В этот момент на его счету замораживается предлагаемая к обмену сумма. 
+The user has the opportunity to make an exchange with another user safely, without the risk of not receiving funds in return. To do this, one user sends exchange request to another user. At this moment, the amount offered for exchange is frozen in his account.
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x438; &#x437;&#x430;&#x44F;&#x432;&#x43A;&#x438; &#x43D;&#x430; &#x43E;&#x431;&#x43C;&#x435;&#x43D;](../../.gitbook/assets/image%20%2837%29.png)
 
-Второй пользователь которому адресовано предложение об обмене может отклонить его или принять. В случае принятия с его счета списывается требуемая для обмена сумма, а в обмен зачисляются замороженные ранее средства первого пользователя. Пользователь может одновременно иметь любое количество предложений на обмен.
+The second user to whom the exchange offer is addressed may reject it or accept. In case of acceptance, the amount required for the exchange is deducted from his account, and the previously frozen funds of the first user are credited in exchange. The user can simultaneously have any number of offers for exchange.
 
 ![&#x421;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x44B;&#x445; &#x437;&#x430;&#x44F;&#x432;&#x43E;&#x43A; &#x43D;&#x430; &#x43E;&#x431;&#x43C;&#x435;&#x43D;](../../.gitbook/assets/image%20%2828%29.png)
 
-## **Оплата** **и выставление счетов**
+## Payment and invoicing
 
-Каждый пользователь может создать счет на оплату и выставить его другому пользователю передав уникальную ссылку, полученную в результате создания счета. 
+Each user can create an invoice for payment and post it to another user by passing a unique link resulting from the creation of an invoice.
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x432;&#x44B;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x441;&#x447;&#x435;&#x442;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44E;](../../.gitbook/assets/image%20%2813%29.png)
 
 ![&#x421;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x441;&#x447;&#x435;&#x442;&#x43E;&#x432; &#x43D;&#x430; &#x43E;&#x43F;&#x43B;&#x430;&#x442;&#x443;](../../.gitbook/assets/image%20%284%29.png)
 
-Ссылка открывает уникальную страницу с информацией об выставленном счете и может быть доступна без авторизации на сайте. Однако для оплаты по счету необходима авторизация. Каждый пользователь может создавать любое количество счетов.
+The link opens a unique page with information about the invoice and can be accessed without authorization on the site. However, authorization is required for invoice payment. Each user can create any number of accounts.
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x443;&#x43D;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x44B; &#x441; &#x432;&#x44B;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x441;&#x447;&#x435;&#x442;&#x43E;&#x43C;](../../.gitbook/assets/image%20%2832%29.png)
 
-## Реферальная програма
+## Referral program
 
-Нами разработана трехуровневая реферальная программа для стимулирования привлечения новых пользователей.
+We have developed a three-level referral program to stimulate the attraction of new users.
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
-**Функционал реферальной программы:**
+**Referral program fetaures:**
 
-* Создание реферальных ссылок со своим уникальным именем и содержанием
-* Просмотр статистики по каждой ссылке
-* Отслеживание статистики по всем трем уровням реферальной программы
-* Расчет общего дохода по реферальной программе в долларах
-* Возможность вывода вознаграждения по запросу пользователя
-* График дохода пользователя за неделю, месяц, год
-* История выплат реферальных вознаграждений 
+* Creating referral links with your unique name and content 
+* View statistics for each link 
+* Tracking statistics on all three levels of the referral program 
+* The calculation of the total income for the referral program in dollars 
+* The ability to withdraw reward at the request of the user 
+* Schedule user income for the week, month, year 
+* Referral rewards payment history 
 

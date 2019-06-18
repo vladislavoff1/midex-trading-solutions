@@ -1,37 +1,37 @@
 ---
 description: >-
-  Счет — это хранилище виртуальных средств пользователей в разных валютах,
-  обеспеченное реальными криптовалютными или фиатными активами, полученными от
-  них биржей и хранящихся на холодных кошельках.‌
+  The account is a repository of virtual funds of users in different currencies,
+  provided with real cryptocurrency or fiat assets, received from them by the
+  exchange and stored in cold wallets.
 ---
 
-# Счета
+# Account
 
-## **Типы счетов**
+## **Account types**
 
-У пользователя может быть 2 типа счета: Основной и биржевой.
+A user can have 2 types of accounts: Main and trade accounts.
 
-Оба счета имеют отдельные балансы в следующих валютах и криптовалютах: BTC, LTC, ETH, DASH, BCH, MDX, NANJ, RUB, EUR, USD, JPY, CNY, GBP, HKD, ADA, NEO, DST, USDT
+Both accounts have separate balances in the following currencies and cryptocurrencies: BTC, LTC, ETH, DASH, BCH, MDX, NANJ, RUB, EUR, USD, JPY, CNY, GBP, HKD, ADA, NEO, DST, USDT
 
-**Возможности основного счета:**
+#### Main account features:
 
-* Пополнение с внешних источников
-* Вывод средств во внешние источники
-* Отправка средств другому пользователю
-* Получение средств от другого пользователя
-* Оплата счетов внутри системы от другого пользователя
-* Получение средств от оплаты счетов, выставленных другому пользователю
-* Создание кодов для альтернативного вывода или перевода 
-* Перевод средств на биржевой счет для торговли
-* Получение средств с биржевого счета после торговли
-* Отправка и получение денег через безопасный обмен с другим пользователем
+* Replenishment from external sources
+* Withdrawing to external sources
+* Sending funds to another user
+* Receiving funds from another user
+* Payment of bills within the system from another user
+* Receiving funds from paying invoices to another user
+* Creating codes for alternative output or translation
+* Transfer of funds to a trading account for trading
+* Receipt of funds from the exchange account after trading
+* Sending and receiving money through a secure exchange with another user
 
-**Возможности биржевой счета:**
+**Trading account features:**
 
-* Пополнение с основного счета
-* Вывод на основной счет
-* Постановка ордера в торговлю на бирже вручную/через REST или FIX API
-* Получение средств от выполнения ордера на бирже
+* Deposit from the main account
+* Conclusion to the main account
+* Placing orders to trade on the exchange manually / through REST or FIX API
+* Receipt of funds from order execution on the exchange
 
 
 

@@ -1,70 +1,69 @@
 ---
 description: >-
-  Chat system - автоматически модерируемая система для общения пользователей
-  платформы с администраций и друг с другом
+  Chat system is an automatically moderated system for communication of platform
+  users with administrators and with each other
 ---
 
 # Chat system
 
-## Пользовательская часть
+## User interface
 
-На странице [биржи](instrumenty.md#torgovaya-ploshadka-birzha) у пользователей есть возможность читать и писать в окно чата расположенное в нижнем правом углу терминала
+On the exchange page, users have the opportunity to read and write to the chat window located in the lower right corner of the terminal.
 
-![&#x418;&#x43D;&#x442;&#x435;&#x440;&#x444;&#x435;&#x439;&#x441; &#x447;&#x430;&#x442;&#x430;](../../.gitbook/assets/image%20%2835%29.png)
+![Chat interface](../../.gitbook/assets/image%20%2835%29.png)
 
-При этом для каждого языка создана своя уникальная чат комната. Чат имеет две глобальных настройки допуска:
+In addition, each language has its own unique chat room. Chat has two global tolerance settings:
 
-* Писать могут все или только пользователи прошедшие процедуру KYC
-* Писать могут пользователи с любым балансом или положительным \(от какой то определенной суммы\)
+* All or only KYC users can write 
+* Users can write with any balance or positive \(from a certain amount\)
 
-Чат показывает реально число on-line пользователей на данный момент.
+Chat shows the actual number of on-line users at the moment. 
 
-ID пользователей в чате не соответствуют их личному ID в системе. Это было сделано специально из соображений безопасности персональных данных. 
+User IDs in the chat do not match their personal ID in the system. This was done specifically for personal data security reasons.
 
-## Администрирование
+## Administration
 
-Для управления чатом была разработана панель администрирования, в которой предусмотрены следующие функции:
+To manage the chat, an administration panel has been developed that provides the following functions:
 
-### Общение с пользователями
+### Communication with users
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x447;&#x430;&#x442; &#x43A;&#x43E;&#x43C;&#x43D;&#x430;&#x442;&#x44B; &#x430;&#x43D;&#x433;&#x43B;&#x438;&#x439;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x44F;&#x437;&#x44B;&#x43A;&#x430;](../../.gitbook/assets/image%20%2834%29.png)
+![Admin page on english chat](../../.gitbook/assets/image%20%2834%29.png)
 
-На этом экране администратор имеет возможность:
+On this screen, the administrator has the ability to:Reply to chat as administrator 
 
-* Ответить в чат от имени администратора
-* Ответить в чат от имени анонимного/любого пользователя
-* Очистить историю чата
-* Заблокировать пользователя \(с указанием времени блокировки\)
-* Удалить конкретное сообщение
+* Reply to chat as anonymous / any user.
+* Clear chat history 
+* Block user \(with blocking time\) 
+* Delete specific message
 
-В отдельной вкладке показаны все сообщения чата в табличном виде с указанием подробной информации по каждому сообщению:
+A separate tab shows all chat messages in tabular form with detailed information on each message:
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x447;&#x430;&#x442;&#x430;](../../.gitbook/assets/image%20%283%29.png)
 
-Данные таблицы списка чата:
+Chat messages table data:
 
-* Уникальное ID сообщения
-* Имя пользователя
-* Сообщение пользователя
-* Реальный ID пользователя
-* Тип пользователя
-* Дата и время сообщения
-* Кнопка блокировки пользователя
-* Кнопка удаления сообщения
+* Unique Message ID 
+* Username 
+* User message 
+* Real user ID 
+* User type 
+* Date and time of the message 
+* User lock button 
+* Delete message button
 
-### Фильтр стоп-слов
+### Stop words filters
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x434;&#x43E;&#x431;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x435; &#x43D;&#x43E;&#x432;&#x44B;&#x445; &#x441;&#x442;&#x43E;&#x43F; &#x441;&#x43B;&#x43E;&#x432;](../../.gitbook/assets/image%20%2810%29.png)
+![Screen for filter words addition \(offensive words are blurred\)](../../.gitbook/assets/image%20%2810%29.png)
 
-Для того чтобы нежелательные сообщения не попадали в чат была создана система препятствующая их размещению. В фильтр можно добавлять слова как списком так и по одному.
+In order to prevent unwanted messages from entering the chat, a system has been created that interferes with their placement. In the filter, you can add words as a list or one by one.
 
-### Список пользователей чата
+### Chat user list
 
 ![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x439; &#x447;&#x430;&#x442;&#x430;](../../.gitbook/assets/image%20%2816%29.png)
 
-В этот список попадают все пользователи чата когда либо написавшие в чат, отображается их реальный ID, а также показано заблокирован пользователь или нет. В случае блокировки показывается оставшееся до автоматической разблокировки время
+This list includes all chat users who have ever written to the chat, their real ID is displayed, and the user is shown blocked or not. In case of blocking, the remaining time until automatic unlocking is shown.
 
-В чате включен анти-флуд и анти-спам фильтры. Первый из них отвечает за то, чтобы пользователь не мог "захватить" чат - в чате не может быть больше 5 сообщений от одного пользователя подряд. Анти-спам, в свою очередь, не пропускает сообщение, текст которого совпадает с предыдущим.
+ The chat includes anti-flood and anti-spam filters. The first of them is responsible for ensuring that the user could not “capture” the chat — there can be no more than 5 messages from one user in a chat in a row. Anti-spam, does not allow the message, the text of which coincides with the previous one.
 
 
 
