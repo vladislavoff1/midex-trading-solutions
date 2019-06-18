@@ -1,34 +1,33 @@
 ---
 description: >-
-  Для эффективной работы системы управления ликвидностью необходимо сразу
-  несколько роботов, работающий параллельно и взаимодействующими не только с
-  пользователями, но и друг с другом
+  For efficient operation of a liquidity management system, several robots are
+  needed at once, operating in parallel and interacting not only with users, but
+  also with each other
 ---
 
-# Типы роботов
+# Trading robot types
 
-## **Робот объема или наполнения стаканов**
+## **Volume robot \(order book filler\)**
 
-Стаканы на бирже должны быть наполнены реальными ордерами, иначе пользователь не сможет купить большой объем валюты.
+Order books on the exchange must be filled with real orders, otherwise the user will not be able to buy a large amount of currency.
 
-Выставлять ордера больших объемов по близким к рыночным ценам — опасно. Цена может быстро измениться и робот потеряет деньги.
+Placing large volume orders at close to market prices is dangerous. The price may change quickly and the robot will lose money.
 
-Поэтому робот делит на части весь выделенный для постановки в стакан объем валюты и расставляет ордера на разном расстоянии от рыночной цены. Он устроен так, что чем дальше цена от рыночной, тем больший объем по этой цене выставлен. Самая близкая и самая далекая цена от рыночной настраиваются.
+Therefore, the robot divides the entire amount of currency allocated for placing in a order book and places orders at different distances from the market price. It is designed so that the further the price is from the market, the greater the volume at this price is set. The closest and furthest price from the market is customized.
 
-Робот постоянно следит за изменением рыночной цены и переставляет ордера, которые становятся недостаточно безопасными \(выгодными\) для робота.
+The robot constantly monitors changes in the market price and rearranges orders that are not safe enough \(profitable\) for the robot.
 
-Для поддержания интереса пользователей робот иногда переставляет свои ордера даже если курс меняется не сильно. Так стакан кажется более «живым» и торговать на валютной паре становится интереснее.
+To maintain user interest, the robot sometimes rearranges its orders even if the exchange rate does not change much. So the order book seems to be more “alive” and it becomes more interesting to trade on a currency pair.
 
-При изменении выделенного на торги ликвидности робот плавно меняет объем стакана, имитируя действия людей, а не роботов.
+When changing the liquidity allocated for trading, the robot smoothly changes the volume of the order book, imitating the actions of people, not robots.
 
-## **Робот торгов**
+## **Trading bot**
 
-Робот ставит две сделки одинакового объема, на продажу и на покупку, по текущему курсу. После отменяет открытые ордера, если они остались. Так робот скупает у пользователей валюту по рыночной или лучшей цене, или, если таких ордеров нет, скупает валюту сам у себя. Это позволяет генерировать на бирже сделки и создает на бирже активность.
+The robot puts two orders of the same volume, for sale and purchase, at the current rate. After cancels open orders if they remain. So the robot buys currency from users at a market or better price, or, if there are no such orders, it buys the currency from itself. This allows you to generate transactions on the exchange and creates activity on the exchange.
 
-Если такого робота не будет, то графики на бирже покажут низкую активность и новые пользователи не будут на бирже торговать.
+If there is no such robot, then the charts on the exchange will show low activity and new users will not trade on the exchange.
 
-## **Робот поддержания интереса пользователей**
+## Robot to maintain user interest
 
-Робот ставит ордера в стакан по менее выгодным для себя курсам, чем робот объема. Через некоторое время робот их отменяет. Это поддерживает активность в спреде стакана и повышает заинтересованность пользователей в торговле. Робот торгует маленьким объемом, частота сделок регулируется, это позволяет прогнозировать расходы на этого робота.  
-
+A robot places orders into a book at rates that are less favorable to themselves than a volume robot. After some time, the robot cancels them. This supports activity in the spread of the order book and increases the interest of users in the trade. The robot trades in a small volume, the frequency of transactions is regulated, this allows you to predict the costs of this robot.
 

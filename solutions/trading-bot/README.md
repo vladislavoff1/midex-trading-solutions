@@ -1,5 +1,5 @@
 ---
-description: Управляет ликвидностью торговой площадки.
+description: Manages liquidity on market
 ---
 
 # Trading Bot

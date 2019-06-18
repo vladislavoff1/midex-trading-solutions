@@ -1,24 +1,22 @@
 ---
 description: >-
-  Программный комплекс для управления ликвидностью, находящейся на корпоративном
-  аккаунте торговой площадки
+  Software package for liquidity management, set up on a corporate account on
+  exchange
 ---
 
-# Введение
+# Introduction
 
-Для управления первичной ликвидностью находящейся на корпоративном аккаунте бирже была разработан программный комплекс Trading Bot. 
+To manage the primary liquidity of the stock exchange located on the corporate account, the Trading Bot software was developed.
 
-Это автономная система с тонкими настройками, позволяющими не просто вести торговлю и реагировать на изменения рынка, но надежно защищать от невыгодных сделок находящуюся в управление ликвидность.
+This is an autonomous system with fine-tuning, allowing not only to trade and react to market changes, but to reliably protect liquidity in management from unprofitable transactions.
 
-## Интерфейс и управление
+UI and basic controls
 
 ![&#x421;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43A; &#x442;&#x43E;&#x440;&#x433;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x430;](https://lh3.googleusercontent.com/r8wwCCBMjiofkz87vIGbYoX-aYjMh4pTkFOQgz2da6zvuJNEbnOCOE5oRICXoB08xVFfUCP_qQJ94LgylXW_GTnKpd6VYnzq4vA7n28JdSBOjkCJYaKv9YFwklMQOE48p2nGwAT0)
 
-Благодаря созданному веб интерфейсу роботом могут управлять сотрудники без каких либо технических навыков. При необходимости решение может работать с любой сторонней биржей, имеющей торговое API.
+Thanks to the web interface, employees can manage robot without any technical skills. If necessary, the solution can work with any third-party exchange that has a trading API.
 
-## **Система внешнего мониторинга**  
+## External monitoring system  ****
 
-Чтобы торговать, роботы должны знать мировые курсы валютных пар. Для каждой валютной пары источником курса может быть своя биржа, это настраивается параметр. На выбор есть около 200 бирж.
-
-## Стек технологий
+Robots need to know the world currency rates so they can trade. For each currency pair, the source of the exchange rate may be its own exchange, this parameter is adjustable. There are about 200 exchanges to choose from.
 
