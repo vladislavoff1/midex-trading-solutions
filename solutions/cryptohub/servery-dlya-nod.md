@@ -27,7 +27,7 @@ Each node has its own API, its own surprises in terms of stability and its own m
 
 For the Bitcoin family, which includes Litecoin, Dash, Bitcoin cash, there are metrics that check how far the node is lagging behind, various block load charts are also built. Monitoring also considers whether there has been a change in blocks in the last half hour. Below is an example of a Bitcoin block download schedule.
 
-![&#x422;&#x430;&#x43A;&#x43E;&#x439; &#x436;&#x435; &#x433;&#x440;&#x430;&#x444;&#x438;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x443;&#x432;&#x438;&#x434;&#x435;&#x442;&#x44C; &#x438; &#x434;&#x43B;&#x44F; ethereum:](https://lh6.googleusercontent.com/Y1ev7N_7Gk9I_4LU5GBApLg53hmAMvc50aBG0I6c7WjJlK7UMQCy4FJutyA9UrxRPS8DCmyIcpg2zhxZFH3oN7kU6iqKogQ0AV-UCxz-8IO7pF3y6f850XW6iAcYLwFHcuV4LCik)
+![Same chart is for ethereum](https://lh6.googleusercontent.com/Y1ev7N_7Gk9I_4LU5GBApLg53hmAMvc50aBG0I6c7WjJlK7UMQCy4FJutyA9UrxRPS8DCmyIcpg2zhxZFH3oN7kU6iqKogQ0AV-UCxz-8IO7pF3y6f850XW6iAcYLwFHcuV4LCik)
 
 
 

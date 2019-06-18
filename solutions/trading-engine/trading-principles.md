@@ -22,7 +22,7 @@ Market orders are usually used when execution time has higher priority than buy/
 
 Stop order is an order, which will execute as market order, when market will reach target stop price.
 
-![Buy STOP &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x441;&#x44F;, &#x435;&#x441;&#x43B;&#x438; &#x446;&#x435;&#x43D;&#x430; &#x43F;&#x43E;&#x432;&#x44B;&#x441;&#x438;&#x442;&#x441;&#x44F; &#x434;&#x43E; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x43E;&#x439;. Sell STOP &#x2014;&#xA0;&#x435;&#x441;&#x43B;&#x438; &#x43F;&#x43E;&#x43D;&#x438;&#x437;&#x438;&#x442;&#x441;&#x44F;.](../../.gitbook/assets/stop-orders.png)
+![Buy STOP will execute, if price gets high enough. Sell STOP - if gets low enough.](../../.gitbook/assets/stop-orders.png)
 
 Stop order for buy executes when market price lowers to a target price.                                                        Stop order for sell executes when market price rises to a target price.
 

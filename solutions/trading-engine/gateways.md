@@ -32,9 +32,9 @@ Rest Gateways take another approach. When this gateway is started, for each core
 
 Comparison of "MultiThreading" and "MultiCoring & Non-Blocking" approaches:
 
-![&#x411;&#x43B;&#x43E;&#x43A;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x439; &#x43A;&#x43E;&#x434;, &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x43E;&#x442;&#x43E;&#x43A; &#x43D;&#x430; &#x43E;&#x434;&#x43D;&#x43E; &#x441;&#x43E;&#x435;&#x434;&#x438;&#x43D;&#x435;&#x43D;&#x438;&#x435;. &#x41F;&#x43E;&#x442;&#x43E;&#x43A;&#x438; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x430;&#x438;&#x432;&#x430;&#x44E;&#x442;](../../.gitbook/assets/tomcat-profiler.png)
+![Blocking code, one thread per connection. Most time threads do nothing.](../../.gitbook/assets/tomcat-profiler.png)
 
-![&#x41D;&#x435;&#x431;&#x43B;&#x43E;&#x43A;&#x438;&#x440;&#x443;&#x44E;&#x449;&#x438;&#x439; &#x43A;&#x43E;&#x434;, &#x43F;&#x43E; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x43F;&#x43E;&#x442;&#x43E;&#x43A;&#x443; &#x43D;&#x430; &#x44F;&#x434;&#x440;&#x43E;. &#x41F;&#x43E;&#x442;&#x43E;&#x43A;&#x438; &#x43D;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x430;&#x438;&#x432;&#x430;&#x44E;&#x442;](../../.gitbook/assets/netty-profiler.png)
+![Non blocking code, one therad per CPU core. Threads are fine.](../../.gitbook/assets/netty-profiler.png)
 
 
 

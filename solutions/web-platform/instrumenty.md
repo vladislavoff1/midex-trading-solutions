@@ -11,7 +11,7 @@ description: >-
 
 This is a trading terminal to work with which the user needs to have a positive balance on his exchange account.
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x432;&#x438;&#x434;&#x430; &#x442;&#x435;&#x440;&#x43C;&#x438;&#x43D;&#x430;&#x43B;&#x430;](../../.gitbook/assets/image%20%285%29.png)
+![Terminal example](../../.gitbook/assets/image%20%285%29.png)
 
 Currently, the following currency pairs are represented on the stock exchange \(90 pairs\):
 
@@ -36,7 +36,7 @@ The user can monitor the quotations for the selected currency pair on any of the
 
 Quotations are updated automatically and provide the user with relevant information.
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x430;&#x433;&#x440;&#x435;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x430; &#x43A;&#x43E;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x43E;&#x43A; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x435; BTC/USD](../../.gitbook/assets/image%20%2819%29.png)
+![Page of aggregator for BTC/USD pair](../../.gitbook/assets/image%20%2819%29.png)
 
 ## Account \(inner storage\)
 
@@ -52,7 +52,7 @@ Used to store user funds and transfer them somewhere. The wallet is protected by
 
 For each cryptocurrency an unique replenishment address is generated, the CryptoHub service, which is also responsible for all external transactions, is responsible for the address generation process. Each wallet has its own unique ID, which is also the user ID.
 
-![&#x41E;&#x43A;&#x43D;&#x43E; &#x441; &#x443;&#x436;&#x435; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x43C; &#x430;&#x434;&#x440;&#x435;&#x441;&#x43E;&#x43C; &#x43F;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F;](../../.gitbook/assets/image%20%2821%29.png)
+![Page with already generated code](../../.gitbook/assets/image%20%2821%29.png)
 
 The following gateways are connected and configured to work with fiat currencies:
 
@@ -86,23 +86,23 @@ The user can send or receive a transfer within the system if there is the necess
 
 The user has the opportunity to make an exchange with another user safely, without the risk of not receiving funds in return. To do this, one user sends exchange request to another user. At this moment, the amount offered for exchange is frozen in his account.
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x43E;&#x442;&#x43F;&#x440;&#x430;&#x432;&#x43A;&#x438; &#x437;&#x430;&#x44F;&#x432;&#x43A;&#x438; &#x43D;&#x430; &#x43E;&#x431;&#x43C;&#x435;&#x43D;](../../.gitbook/assets/image%20%2837%29.png)
+![Exchange example creation page](../../.gitbook/assets/image%20%2837%29.png)
 
 The second user to whom the exchange offer is addressed may reject it or accept. In case of acceptance, the amount required for the exchange is deducted from his account, and the previously frozen funds of the first user are credited in exchange. The user can simultaneously have any number of offers for exchange.
 
-![&#x421;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x44B;&#x445; &#x437;&#x430;&#x44F;&#x432;&#x43E;&#x43A; &#x43D;&#x430; &#x43E;&#x431;&#x43C;&#x435;&#x43D;](../../.gitbook/assets/image%20%2828%29.png)
+![Exchange requests list](../../.gitbook/assets/image%20%2828%29.png)
 
 ## Payment and invoicing
 
 Each user can create an invoice for payment and post it to another user by passing a unique link resulting from the creation of an invoice.
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x432;&#x44B;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x441;&#x447;&#x435;&#x442;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44E;](../../.gitbook/assets/image%20%2813%29.png)
+![Invoice creation modal](../../.gitbook/assets/image%20%2813%29.png)
 
-![&#x421;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x441;&#x447;&#x435;&#x442;&#x43E;&#x432; &#x43D;&#x430; &#x43E;&#x43F;&#x43B;&#x430;&#x442;&#x443;](../../.gitbook/assets/image%20%284%29.png)
+![Bills list](../../.gitbook/assets/image%20%284%29.png)
 
 The link opens a unique page with information about the invoice and can be accessed without authorization on the site. However, authorization is required for invoice payment. Each user can create any number of accounts.
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x443;&#x43D;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x44B; &#x441; &#x432;&#x44B;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x441;&#x447;&#x435;&#x442;&#x43E;&#x43C;](../../.gitbook/assets/image%20%2832%29.png)
+![Bill overview](../../.gitbook/assets/image%20%2832%29.png)
 
 ## Referral program
 

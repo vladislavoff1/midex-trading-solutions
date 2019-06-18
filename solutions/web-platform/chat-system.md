@@ -59,7 +59,7 @@ In order to prevent unwanted messages from entering the chat, a system has been 
 
 ### Chat user list
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x439; &#x447;&#x430;&#x442;&#x430;](../../.gitbook/assets/image%20%2816%29.png)
+![User list](../../.gitbook/assets/image%20%2816%29.png)
 
 This list includes all chat users who have ever written to the chat, their real ID is displayed, and the user is shown blocked or not. In case of blocking, the remaining time until automatic unlocking is shown.
 

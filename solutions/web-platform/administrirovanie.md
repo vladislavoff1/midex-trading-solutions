@@ -187,13 +187,11 @@ In this section, the administrator can turn on or off any trading pair placed on
 
 ## Trading statistics \(volume\)
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43A;&#x438; &#x442;&#x43E;&#x440;&#x433;&#x43E;&#x432; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;](../../.gitbook/assets/image%20%2827%29.png)
+![Statistics example for given pair](../../.gitbook/assets/image%20%2827%29.png)
 
-По каждой валютной паре можно узнать статистику за день, неделю или месяц. При этом отдельно показывается информация по каждой валюте в паре.
+For each currency pair you can find out the statistics for the day, week or month. At the same time, information on each currency in the pair is shown separately. If necessary, you can switch the table to the display mode of trade turnover for each currency by adding up for each pair in which it participates.
 
-При необходимости можно переключить таблицу на режим показа торговых оборотов по каждой валюте суммируя по каждой паре в которой она участвует.
-
-## Статистика заработка биржи
+## Income statistics
 
 ![Example page of exchange earnings statistics ](../../.gitbook/assets/image%20%2829%29.png)
 

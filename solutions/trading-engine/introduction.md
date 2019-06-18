@@ -10,7 +10,7 @@ description: What is trading engine and what problems it must solve
 
 ### \*\*\*\*
 
-![Trading Engine &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x442; &#x43E;&#x440;&#x434;&#x435;&#x440;&#x430;](../../.gitbook/assets/trading_engine%20%281%29.png)
+![Trading Engine executes orders](../../.gitbook/assets/trading_engine%20%281%29.png)
 
 Trading engine serves for market makers, users and trading bots. This clients create load at more than 10000 operations in second.
 
