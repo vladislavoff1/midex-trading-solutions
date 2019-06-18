@@ -30,5 +30,5 @@
   * [Account](solutions/web-platform/bank-1.md)
   * [Instruments](solutions/web-platform/instrumenty.md)
   * [Chat system](solutions/web-platform/chat-system.md)
-  * [Администрирование](solutions/web-platform/administrirovanie.md)
+  * [Administration](solutions/web-platform/administrirovanie.md)
 

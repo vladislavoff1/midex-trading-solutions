@@ -1,193 +1,191 @@
 ---
 description: >-
-  Панель администрирования служит для настройки работы торговой площадки,
-  модерации транзакций и проверке данных пользователей и их операций по запросам
+  The administration panel is used to customize the operation of the trading
+  platform, moderate transactions and verify user data and their operations upon
+  requests
 ---
 
-# Администрирование
+# Administration
 
-## Поиск
+## Search
 
-Поиск осуществляется по ID и e-mail пользователя
+Search is performed by user ID and e-mail
 
-## Страница пользователя
+## User page
 
-Служит для проверки и модерации данных пользователя. Имеет следующие вкладки
+Serves for checking and moderating user data. It has the following tabs
 
-### Основная информация
+### Overview
 
-![&#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x430;&#x44F; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x44F; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%287%29.png)
+![User overview](../../.gitbook/assets/image%20%287%29.png)
 
-На этой вкладке представлены следующие данные:
+The following data is presented on this tab:
 
-* Имя пользователя
-* Электронная почта
-* Телефон пользователя
-* Дата и время регистрации
-* Дата и время активации аккаунта \(подтверждение\)
-* Дата и время последнего входа
+* Username
+* Email
+* User phone 
+* Registration date and time 
+* Date and time of account activation \(confirmation\) 
+* Date and time of last login
 
-В отдельном блоке представлены инструменты модерации:
+Moderation tools are presented in a separate block:
 
-* Включение/отключение двуфакторной авторизации
-* Блокировка входа пользователя
-* Блокировка пополнений пользователя
-* Блокировка выводов пользователя
-* Блокировка переводов пользователя
-* Блокировка выставления счетов пользователем
-* Блокировка функции обмена с другими пользователями
-* Блокировка создания MDX-кодов
-* Блокировка переводов между основным и биржевым счетами
+* Enable / disable two-factor authentication 
+* User login lock 
+* Blocking user deposits 
+* Lock user pins 
+* Blocking user translations 
+* User billing block 
+* Block sharing with other users
+* Blocking the creation of MDX codes
+* Blocking transfers between main and exchange accounts
 
-В отдельном блоке представлена история входов пользователя:
+A separate block presents the history of user logins:
 
-![&#x418;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F; &#x430;&#x432;&#x442;&#x43E;&#x440;&#x438;&#x437;&#x430;&#x446;&#x438;&#x439; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%2831%29.png)
+![Authentication history](../../.gitbook/assets/image%20%2831%29.png)
 
-В таблице истории отображено:
+The history table displays:Дата и время входа
 
-* Дата и время входа
-* IP входа
-* Браузер пользователя
-* Операционная система пользователя
+* IP login 
+* User Browser 
+* User operating system
 
-### Личные данные
+### Personal data
 
-На этой страницы отображаются данные указанные пользователем при прохождение процедуры верификации.
+This page displays the data specified by the user during the verification procedure.
 
-* Имя
-* Фамилия
-* Отчество
-* Дата рождения
-* Страна выдачи паспорта
-* Серия номер паспорта
-* Дата выдачи паспорта
-* Срок действия паспорта
-* Адрес пользователя
+* Name
+* Surname 
+* Middle name 
+* Date of Birth 
+* Country of issue of passport 
+* Passport Number Series 
+* Date of issue of passport 
+* Passport validity 
+* User Address
 
-Под блоком с данным отображаются сканы загруженных пользователем документов, предоставленных для проверки.
+Under the block with this, scans of user-submitted documents submitted for inspection are displayed.
 
-### Реферальная программа
+### Referral program
 
-На этой странице показано сколько пользователь заработал при использование реферальной программы
+This page shows how much the user earned using the referral program.
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43A;&#x438; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F; &#x43F;&#x43E; &#x440;&#x435;&#x444;&#x435;&#x440;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x435;](../../.gitbook/assets/image.png)
+![Exmaple referral program statistics](../../.gitbook/assets/image.png)
 
-Показывается баланс заработка в каждой валюте, а также сколько регистраций было произведено по его реферальной ссылке на каждом из трех уровней. Общий доход отображается для каждого уровня отдельно.
+It shows the balance of earnings in each currency, as well as how many registrations were made by his referral link at each of the three levels. The total income is displayed for each level separately.
 
-Во вкладке Выплаты отображается история зачислений реферальных вознаграждений на основной счет пользователя.
+The Payouts tab displays the history of crediting referral rewards to the user's main account.
 
-### Балансы пользователя
+### User Balances
 
-![&#x421;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%288%29.png)
+![User page](../../.gitbook/assets/image%20%288%29.png)
 
-Балансы пользователя показаны в двух вкладках: Основной и биржевой. В таблице указаны все валюты и балансы на каждой. Отображен факт блокировки отдельного счета валюты и дата завершения блокировки. Блокировка может быть по причини срабатывания системы Антифрод, которая действует для всех новых пополнений для каждого фиатного шлюза.
+User balances are shown in two tabs: Main and Trade. The table shows all currencies and balances for each. Displays the fact of blocking a separate currency account and the date the lock was completed. Blocking can be due to the cause of the Antifrod system, which is valid for all new additions for each fiat gateway.
 
-### Операции пользователя
+### User operations
 
-На этой странице показаны все совершенные пользователем операции:
+This page shows all the operations performed by the user.
 
-### **Переводы**
+### **Transfers**
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x442;&#x430;&#x431;&#x43B;&#x438;&#x446;&#x44B; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x43E;&#x434;&#x43E;&#x432; &#x43E;&#x442; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F; &#x438;&#x43B;&#x438; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44E;](../../.gitbook/assets/image%20%2818%29.png)
+![Transfer table data example](../../.gitbook/assets/image%20%2818%29.png)
 
-В таблице показано кем был пользователь во время операции \(отправителем или получателем\) а также имя его контрагента, кликнув на которое можно перейти на его страницу. Указана сумма и валюта перевода, а также дата и время его совершения. В последнем столбце отображен факт подтверждения операции по электронной почте
+The table shows who the user was during the operation \(the sender or recipient\) and the name of his counterparty, by clicking on which you can go to his page. The amount and currency of the transfer are indicated, as well as the date and time of the transfer. The last column shows the confirmation of the operation by e-mail.
 
-### **Выставленные счета**
+### **Invoices**
 
-В таблице показано кем был пользователь во время операции \(создателем счета или плательщиком\) а также имя его контрагента, кликнув на которое можно перейти на его страницу. Указана сумма и валюта перевода, а также дата и время его совершения. В последнем столбце указан статус операции \(выставлен, оплачен, отклонен\)
+The table shows who the user was during the operation \(the creator of the account or the payer\) and the name of his counterparty, by clicking on which you can go to his page. The amount and currency of the transfer are indicated, as well as the date and time of the transfer. The last column indicates the status of the operation \(set, paid, declined\)
 
-### **Обмены с другим пользователем**
+### Exchanges with other users
 
-![&#x442;&#x430;&#x431;&#x43B;&#x438;&#x446;&#x430; &#x43E;&#x431;&#x43C;&#x435;&#x43D;&#x430; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F; &#x441; &#x434;&#x440;&#x443;&#x433;&#x438;&#x43C;&#x438; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;&#x43C;&#x438;](../../.gitbook/assets/image%20%281%29.png)
+![Exchanges history](../../.gitbook/assets/image%20%281%29.png)
 
-На этой странице отображено когда и с кем производился обмен, сколько на сколько меняли, в каких валютах. Указан статус обмена \(предложен, принят, отклонен\) и комментарий к обмену который указывает инициатор обмена.
+This page shows when and with whom the exchange was made, how much, how much, in which currencies. The exchange status \(proposed, accepted, declined\) and the comment to the exchange that indicates the initiator of the exchange is indicated.
 
-### **MDX-коды**
+### **MDX-codes**
 
-На этой странице показан список всех кодов которые создавал пользователь. 
+This page shows a list of all codes that the user created.
 
-![C&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430; &#x43A;&#x43E;&#x434;&#x43E;&#x432; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x445; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x435;&#x43C;](../../.gitbook/assets/image%20%2812%29.png)
+![Created codes page](../../.gitbook/assets/image%20%2812%29.png)
 
-В таблице указана вся информация по созданным кодам:
+The table shows all the information on the codes created:Создатель кода
 
-* Создатель кода
-* Кто активировал код \(если нет данных то код не активировали еще\)
-* Дата создания
-* Дата активации
-* Сумма
-* Валюта
-* Факт подтверждения операции по электронной почте
+* Who activated the code \(if no data, the code is not activated yet\)
+* Date of creation
+* Activation date 
+* Amount 
+* Currency 
+* The fact of confirmation of the operation by e-mail
 
-### **Открытые ордера пользователя**
+### **Open user orders**
 
-![&#x422;&#x430;&#x431;&#x43B;&#x438;&#x446;&#x430; &#x43E;&#x442;&#x43A;&#x440;&#x44B;&#x442;&#x44B;&#x445; &#x43E;&#x440;&#x434;&#x435;&#x440;&#x43E;&#x432; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%2814%29.png)
+![Open user orders table](../../.gitbook/assets/image%20%2814%29.png)
 
-В таблице указано вся информация по открытым на данный момент ордерам пользователя
+The table shows all the information on the currently open user ordersID ордера
 
-* ID ордера
-* Валютная пара
-* Операция \(покупка или продажа\)
-* Цена
-* Объем который остался не исполненным на текущий момент
-* Сколько заморожено на биржевом счету
-* Изначальный объем ордера
-* Дата создания ордера
+* Currency pair
+* Operation \(buy or sell\) 
+* Price 
+* The volume that remained unfulfilled to date 
+* How much is frozen on the stock account 
+* Initial order volume 
+* Order Creation Date
 
-### **История сделок пользователя**
+### **Deal history**
 
-![&#x418;&#x441;&#x442;&#x43E;&#x440;&#x438;&#x44F; &#x441;&#x434;&#x435;&#x43B;&#x43E;&#x43A; &#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44F;](../../.gitbook/assets/image%20%2836%29.png)
+![User deals history](../../.gitbook/assets/image%20%2836%29.png)
 
-Отображается вся информация по когда либо совершенным сделкам
+Displays all information on ever completed deals.
 
-* ID сделки
-* Валютная пара
-* Тип операции \(покупка или продажа\)
-* Цена
-* Объем
-* Комиссия
-* Дата закрытия сделки
+* Transaction ID
+* Currency pair 
+* Type of operation \(buy or sell\)
+* Price 
+* Volume 
+* Commission 
+* Closing date
 
-### История пополнений 
+### Deposit history
 
-Отображает историю пополнений пользователя, которая отображается точно также как и [история всех пополнений ](administrirovanie.md#spisok-popolnenii-schetov)только с фильтрацией по искомому пользователю.
+Displays the user’s top-up history, which is displayed exactly the same as the history of all top-ups only with filtering by the desired user.
 
-### История выводов
+### Withdrawal history
 
-Отображает историю пополнений пользователя, которая отображается точно также как и [история всех выводов](administrirovanie.md#spisok-vyvodov-so-schetov) только с фильтрацией по искомому пользователю.
+Displays the user replenishment history, which is displayed in the same way as the history of all pins only with filtering by the desired user.
 
-### Крипто адреса пользователя
+### Cryptocurrencies addresses
 
-Отображает все сгенерированные для пользователя адреса по каждой из валют.
+Displays all addresses generated for the user for each currency.
 
-## Контрольная таблица
+## Monitoring table
 
-![&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x43A;&#x43E;&#x43D;&#x442;&#x440;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E;&#x439; &#x442;&#x430;&#x431;&#x43B;&#x438;&#x446;&#x44B;](../../.gitbook/assets/image%20%2830%29.png)
+![Montoring table example](../../.gitbook/assets/image%20%2830%29.png)
 
-Таблица служит для наглядного мониторинга за финансовым балансом системы, проверке на соответствие всех вводов всем выводам с учетом комиссий по каждой валюте.
+The table serves for visual monitoring of the financial balance of the system, checking for compliance of all inputs with all conclusions, including commissions for each currency.
 
-Поля контрольной таблицы:
+Fields are:
 
-* Основной
-* Биржевой
-* В ордерах
-* Комиссия биржи
-* В MDX-кодах
-* Итого виртуальных активов в системе
-* Комиссии за оплаченные счета
-* Все вводы
-* Комиссия пополнений
-* Все выводы
-* Контрольная цифра \(разница вводов и выводов\)
-* Комиссия выводов
-* Банк - то сколько в системе должно быть итого средств пользователей. Эта цифра сверяется с реальными средствами находящимися у биржи.
+* Main
+* Trade
+* In orders
+* Commission
+* In MDX-codes
+* Total virtual assets in the system
+* Fees paid
+* All deposits
+* Deposit Commission
+* All withdrawals
+* Check Digit \(Difference deposit and withdrawal\)
+* Withdrawal commission
+* Bank - how much the user funds should be in the system. This number is verified with the real funds held by the exchange.
 
-## Настройки валютных пар
+## Currency pair settings
 
-![&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x44D;&#x43A;&#x440;&#x430;&#x43D;&#x430; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x438; &#x432;&#x430;&#x43B;&#x44E;&#x442;&#x43D;&#x44B;&#x445; &#x43F;&#x430;&#x440;](../../.gitbook/assets/image%20%286%29.png)
+![Currency pair settings page](../../.gitbook/assets/image%20%286%29.png)
 
-В этом разделе администратор может включить или выключить [любую торговую пару размещенную на бирже](instrumenty.md#torgovaya-ploshadka-birzha), а также установить лимиты и взимаемые комиссии, которые автоматически транслируются на публичную часть сайта и в торговый терминал
+In this section, the administrator can turn on or off any trading pair placed on the stock exchange, as well as set limits and charged commissions, which are automatically transmitted to the public part of the site and to the trading terminal.
 
-## Статистика торгов \(обороты\)
+## Trading statistics \(volume\)
 
 ![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43A;&#x438; &#x442;&#x43E;&#x440;&#x433;&#x43E;&#x432; &#x43F;&#x43E; &#x43F;&#x430;&#x440;&#x430;&#x43C;](../../.gitbook/assets/image%20%2827%29.png)
 
@@ -197,77 +195,77 @@ description: >-
 
 ## Статистика заработка биржи
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x44D;&#x43A;&#x440;&#x430;&#x43D;&#x430; &#x441;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43A;&#x438; &#x431;&#x438;&#x440;&#x436;&#x438;](../../.gitbook/assets/image%20%2829%29.png)
+![Example page of exchange earnings statistics ](../../.gitbook/assets/image%20%2829%29.png)
 
-На этом экране администратору доступна информация о том сколько по какой валюте заработала биржа. Под заработком подразумевается заработок на комиссиях с таких операций как:
+On this screen, the administrator has access to information about how much the exchange has earned in what currency. Under earnings refers to earnings on commissions from such operations as:
 
-* Биржевые торги
-* Оплаченные счета
-* Обмены между пользователями
-* Вводы
-* Выводы
+* Exchange 
+* Trades 
+* Paid bills 
+* User exchanges
+* Deposits
+* Withdrawals
 
-В последнем столбце показана суммарная прибыль по каждой валюте.
+The last column shows the total profit for each currency.
 
-## Фиатные/крипто шлюзы пополнений
+## Fiat / Crypto Deposit Gateways
 
-Отвечают за комиссия и лимиты для ввода и пополнения криптовалютных и фиатных счетов.
+Responsible for the commission and limits for the deposit and replenishment of cryptocurrency and Fiat accounts.
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x43D;&#x430;&#x441;&#x442;&#x440;&#x43E;&#x439;&#x43A;&#x438; &#x43A;&#x43E;&#x43C;&#x438;&#x441;&#x441;&#x438;&#x439; &#x434;&#x43B;&#x44F; &#x432;&#x432;&#x43E;&#x434;&#x430;/&#x432;&#x44B;&#x432;&#x43E;&#x434;&#x430; BTC](../../.gitbook/assets/image%20%2811%29.png)
+![Example settings](../../.gitbook/assets/image%20%2811%29.png)
 
-Каждый шлюз можно включить, выключить. Задать тип комиссии \(фиксированная или процент\) для ввода и вывода отдельно
+Each gateway can be turned on and off. Set commission type \(fixed or percentage\) for input and output separately.
 
-## Список пополнений счетов
+## List of account deposits
 
-![&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x445;&#x440;&#x43E;&#x43D;&#x43E;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x43F;&#x43E;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x439; &#x43F;&#x43E; BTC](../../.gitbook/assets/image%20%289%29.png)
+![example of a chronological list of deposits on BTC](../../.gitbook/assets/image%20%289%29.png)
 
-На странице списка пополнений показана таблица для каждой из криптовалюты в которой отображаются следующие данные в хронологическом порядке:
+The page of the list of deposits shows a table for each of the cryptocurrencies in which the following data is displayed in chronological order:
 
-* Имя и ID пользователя \(при клике переходит на карточку пользователя\)
-* Дата операции
-* Тип валюты
-* Сумма пополнения
-* Хэш транзакции \(при клике открывает страницу с мониторингом транзакции\)
-* Факт зачисления на баланс пользователя
+* User name and ID \(when clicking, go to the user card\) 
+* Date of operation 
+* Currency type Refill amount 
+* Hash transaction \(when clicked, opens the page with the monitoring of the transaction\) 
+* The fact of transfer to the user's balance
 
-## Список выводов со счетов
+## List of withdrawals
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x44B; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x432;&#x44B;&#x432;&#x43E;&#x434;&#x43E;&#x432;](../../.gitbook/assets/image%20%2838%29.png)
+![Example of withdrawals list](../../.gitbook/assets/image%20%2838%29.png)
 
-Перед таблицей показано сколько на данный момент средств ожидается к выводу \(зеленый блок\). В синем блоке показывается сколько средства находятся на кошельке системы предназначенного для выводов, с которого выводы производятся автоматически.
+Before the table it is shown how much money is currently expected to be withdrawn \(green block\). The blue block shows how much funds are on the wallet of the system designed for withdrawals, from which the withdrawals are made automatically.
 
-На странице списка выводов показана таблица для каждой из криптовалюты в которой отображаются следующие данные в хронологическом порядке:
+The output list page shows a table for each of the cryptocurrencies in which the following data is displayed in chronological order:
 
-* Имя и ID пользователя \(при клике переходит на карточку пользователя\)
-* Дата операции
-* Тип валюты
-* Сумма вывода
-* Хэш транзакции \(при клике открывает страницу с мониторингом транзакции\)
-* Факт завершения вывода. При появление заявки больше определенной суммы, она замораживается до момента ручного одобрения модератором\) 
+* User name and ID \(when clicking, go to the user card\) 
+* Date of operation 
+* Currency type 
+* Withdrawal amount 
+* Hash transaction \(when clicked, opens the page with the monitoring of the transaction\) 
+* The fact of completion of the withdrawal. When an application is more than a certain amount, it is frozen until the moderator manually approves it\)
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x43D;&#x435; &#x43F;&#x43E;&#x434;&#x442;&#x432;&#x435;&#x440;&#x436;&#x434;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x43F;&#x43E; &#x44D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x43D;&#x43E;&#x439; &#x43F;&#x43E;&#x447;&#x442;&#x435; &#x442;&#x440;&#x430;&#x43D;&#x437;&#x430;&#x43A;&#x446;&#x438;&#x438;](../../.gitbook/assets/image%20%2815%29.png)
+![Example of withdrawal which isn&apos;t confirmed by email](../../.gitbook/assets/image%20%2815%29.png)
 
-Не подтвержденные по электронной почте транзакции помечаются соответствующим бейджем.
+Transactions not confirmed by e-mail are marked with a corresponding badge.
 
-##  Сервисные кошельки
+## Service Wallets
 
-Для некоторых криптовалют необходим дополнительный источник средств, который обеспечивает транзакции. Для ETH и токенов ERC20 это газ, а для USDT это BTC. На эту страницу выведен баланс таких кошельков чтобы администратор мог его контролировать и оперативно пополнять.
+For some cryptocurrencies, an additional source of funds is needed that provides transactions. For ETH and ERC20 tokens it is gas, and for USDT it is BTC. The balance of such wallets is displayed on this page so that the administrator can control and quickly replenish it.
 
-## Создание администраторов системы
+## Creation of system administrators
 
-Простая система ролей где для каждого созданного администратора можно включить доступ ко всем вышеперечисленным функциям или заблокировать его
+A simple role system where for each administrator created you can enable access to all the above functions or block it.
 
-## Выгрузки данных пользователей
+## User data export
 
-![&#x41E;&#x43A;&#x43D;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x44F; &#x432;&#x44B;&#x433;&#x440;&#x443;&#x437;&#x43A;&#x438;](../../.gitbook/assets/image%20%2823%29.png)
+![Export creation window](../../.gitbook/assets/image%20%2823%29.png)
 
-Позволяет создать файл с выгрузкой в котором будут отмечены пользователи отсортированные по заданным в фильтре параметрам. Выгрузка будет доступна для скачивания в отдельно списке.
+Allows you to create a file with upload in which users sorted by the parameters specified in the filter will be marked. Upload will be available for download in a separate list.
 
-![&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x433;&#x43E;&#x442;&#x43E;&#x432;&#x44B;&#x445; &#x432;&#x44B;&#x433;&#x440;&#x443;&#x437;&#x43E;&#x43A;](../../.gitbook/assets/image%20%2833%29.png)
+![Example of ready exported data](../../.gitbook/assets/image%20%2833%29.png)
 
-Каждая выгрузка имеет свое имя. Администраторы могут создать для себя дневные, недельные отчеты по заданным параметрам
+Each upload has its own name. Administrators can create daily, weekly reports for themselves according to specified parameters.
 
-## Выключение сайта
+## Planned downtime switch
 
-Возможность перевести биржу в режим разработки. Во время его включения все пользователи биржи увидят страницу сообщающую им что производятся технические работы.
+The ability to translate the exchange in the development mode. When it is turned on, all users of the exchange will see a page informing them that technical work is being done.
 
