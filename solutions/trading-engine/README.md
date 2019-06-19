@@ -1,7 +1,7 @@
 ---
 description: >-
-  Сталкивает ордера, хранит балансы пользователей, рассчитывает комиссии и
-  распределяет деньги после сделки.
+  Matches orders, holds user balances, calculates commissions and distributes
+  money after deal.
 ---
 
 # Trading Engine

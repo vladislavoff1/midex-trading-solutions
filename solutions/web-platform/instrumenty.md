@@ -110,7 +110,7 @@ We have developed a three-level referral program to stimulate the attraction of 
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
-**Referral program fetaures:**
+**Referral program features:**
 
 * Creating referral links with your unique name and content 
 * View statistics for each link 

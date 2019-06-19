@@ -1,5 +1,5 @@
 ---
-description: То над чем в настоящий момент идет работа
+description: What is going to be implemented in nearby future
 ---
 
 # Roadmap

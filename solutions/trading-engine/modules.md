@@ -6,9 +6,7 @@ description: What are Trading Engine's parts are and how they exchange data
 
 ## **Definitions**
 
-**Module** is an independent isolated part of Trading Engine. Module may be deployed on different server
-
-**Компонент** — самостоятельная часть модуля. У компонентов внутри модуля общая память. Часто компоненты работают в одном потоке внутри модуля.
+**Module** is an independent isolated part of Trading Engine. Module may be deployed on different server.
 
 **Component** is an independent part of module. Components share memory between themselves inside module, and they also often work on one thread in module.
 

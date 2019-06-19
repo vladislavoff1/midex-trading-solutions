@@ -27,7 +27,7 @@ To manage the chat, an administration panel has been developed that provides the
 
 ### Communication with users
 
-![Admin page on english chat](../../.gitbook/assets/image%20%2834%29.png)
+![Admin page on english Midex chat](../../.gitbook/assets/image%20%2834%29.png)
 
 On this screen, the administrator has the ability to:Reply to chat as administrator 
 
@@ -38,7 +38,7 @@ On this screen, the administrator has the ability to:Reply to chat as administra
 
 A separate tab shows all chat messages in tabular form with detailed information on each message:
 
-![&#x42D;&#x43A;&#x440;&#x430;&#x43D; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x430; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x439; &#x447;&#x430;&#x442;&#x430;](../../.gitbook/assets/image%20%283%29.png)
+![All messages list](../../.gitbook/assets/image%20%283%29.png)
 
 Chat messages table data:
 

@@ -10,8 +10,6 @@ It is unsafe to keep all data on one server. If this server breaks, all data wil
 
 **Server which copies data is called replica.** Process of data copy on different servers is called replication.
 
-**Количество реплик настраивается.** Обычно мы используем две реплики.
-
 **Amount of replicas is customisable.** We usually use 2 replicas. 
 
 The more replicas system has, the more reliable it is. The cost is speed, so there should be balance between reliability and performance in terms of replicas count.

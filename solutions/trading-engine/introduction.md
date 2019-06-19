@@ -22,8 +22,6 @@ Trading engine's functions are described more in "Trading fundamentals"
 
 ### **1.** High throughput
 
-Чтобы можно было торговать большому количеству торговых роботов. Каждая сделка — прибыль биржи. Так, повышая скорость биржи, мы повышаем возможное количество роботов, торгующих на ней и повышаем прибыльность.
-
 With high throughput abilities of service more client it can serve. Each deal is beneficial for exchange, so the higher throughput is, the more trading bots may trade
 
 ### **2. Low and predictable latency**
@@ -31,10 +29,6 @@ With high throughput abilities of service more client it can serve. Each deal is
 Low latency is very important for high frequency trading bots. So if latency is higher comparing to other exchanges, exchange becomes harder to arbitrage. It is also important for all clients to be im same conditions for trading, meaning same latencies for matching orders.
 
 ### **3. Stability**
-
-Каждая минута незапланированного простоя биржи — упущенные прибыль и репутация. Потерянные данные для биржи — крах.
-
-При выходе биржи из строя или при выходе из строя целого датацентра \(например при пожаре\) биржа должна сохранить свои данные.
 
 Each unplanned exchange downtime is lost profit and reputation. Lost data is a total disaster. When exchange or datacenter goes down unexpectedly it must save data. 
 

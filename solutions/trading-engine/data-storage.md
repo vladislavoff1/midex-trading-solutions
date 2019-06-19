@@ -21,8 +21,6 @@ Assuming that almost each operation of Trading Engine is money transferring, eac
 
 ## Event Sourcing
 
-Вместо балансов пользователей мы храним события пользователя: сделал депозит, выставил ордер. Этот подход называется EventSourcing. Текущий баланс пользователя на диске не хранится. 
-
 Instead of users' balances we keep users' events: deposit event, order creation. This approached is called Event Sourcing. We don't keep users' balances to hard drive. 
 
 > We used to keep final state, but now we keep events:

@@ -32,10 +32,6 @@ Data written to logs should be as neat as possible. In low-latency applications 
 
 ### Garbage collecting
 
-Снизить до минимума [количество мусора](https://habr.com/ru/post/436024/), которое производит приложение. Чем быстрее heap заполнится мусором, тем скорее запустится сборщик мусора. 
-
-Хранить данные и объекты можно за пределами JVM heap в нативной памяти JVM процесса. Это делается либо с помощью недокументированного класса [Unsafe](https://www.baeldung.com/java-unsafe).
-
 It is important to minimise garbage application produces. The faster heap is filled with garbage, the faster GC is called to free RAM, which causes to temporal latency increases. 
 
 Data may be stored outside of JVM heap in native memory of JVM process. It is done using experimental [Unsafe](https://www.baeldung.com/java-unsafe) implementation. 

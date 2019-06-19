@@ -1,5 +1,5 @@
 ---
-description: Адаптер между блокчейнами и сервисом пополнения и вывода Midex.
+description: Bridge between blockchains and deposit/withdraw service in Midex.
 ---
 
 # Crypto Hub
