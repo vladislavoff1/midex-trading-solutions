@@ -32,3 +32,7 @@
   * [Chat system](solutions/web-platform/chat-system.md)
   * [Администрирование](solutions/web-platform/administrirovanie.md)
 
+## Try Midex
+
+* [Midex Exchange Demo](try-midex/exchange-demo.md)
+
