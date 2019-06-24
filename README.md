@@ -1,5 +1,5 @@
 ---
-description: Решения Midex для финансовых бирж.
+description: Midex solution for exchanges
 ---
 
 # Getting started
